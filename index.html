@@ -1,12 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS Materialize -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Game Selector!</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <nav id="" class="">
+        <!-- nav bar  -->
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">-----</a></li>
+          <li><a href="#">-----</a></li>
+          <li><a href="#">-----</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Jumbotron -->
+    <section class="hero">
+      <div class="">
+        <!-- Jumbotron stuff-->
+      </div>
+    </section>
+
+    <!-- drop down container -->
+    <div class="container hide">
+      <!-- class hide is to display : hide; to hide the what is within container. -->
+      <div id="tabs" class="drop-down">
+        <div id="drop-down" class="genreStyles">
+          <!-- Genre  -->
+          <h1 class="title">Genre</h1>
+          <select name="genre-container" id="selectGenre">
+            <option value="rpg-option">RPG</option>
+            <option value="strategy-option">Strategy</option>
+            <option value="shooters-option">Shooters</option>
+            <option value="action-option">Action</option>
+            <option value="moba-option">MOBA</option>
+            <option value="mmmorpg-option">MMORPG</option>
+            <option value="sandbox-option">Sandbox</option>
+            <option value="puzzle-option">Puzzlers</option>
+            <option value="rts-option">RTS</option>
+            <option value="survival-option">Survival</option>
+            <option value="platform-option">Platformer</option>
+            <option value="sport-option">Sports</option>
+          </select>
+
+          <!-- Console -->
+          <h1 class="title hide">Console</h1>
+          <select name="console-container" id="selectConsole" class="consoleStyles" >
+            <option value="pc-option">PC</option>
+            <option value="ps4-option">PS4</option>
+            <option value="ps5-option">PS5</option>
+            <option value="switch-option">Switch</option>
+            <option value="xbox-option">Xbox</option>
+          </select>
+
+          <!-- Does release date matter -->
+          <div>
+            <h1 class="title">Does Release Date matter to you?</h1>
+            <form id="releaseCheck" action="">
+              <input name="checkYes" type="checkbox" id="checkbox1" value="yes" />
+              <label for="checkYes">Yes</label><br />
+              <input name="checkNo" type="checkbox" id="checkbox2" value="no" />
+              <label for="checkNo">No</label><br />
+            </form>
+          </div>
+
+          <!-- Ratings -->
+          <h1 class="title">Rating</h1>
+          <select name="ratings" id="selectRatings" class="ratingStyles">
+            <option value="ec-option">EC-Early Childhood</option>
+            <option value="e-option">E-Everyone</option>
+            <option value="t-option">T-Teen</option>
+            <option value="m-option">M-mature</option>
+          </select>
+
+          <!-- Button for submitting -->
+          <button id="submitButton" class="submitButton hide">Get Game!</button>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
