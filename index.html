@@ -11,35 +11,49 @@
 </head>
 
 <body>
-    <h1>Rough Outline for m</h1>
+    <h1>Rough Outline for Me</h1>
     <form class=example>
-        <label for="searchInput" class="test"></label>
-        <select name="genres" id="genres">Pick a genre
-            <option id=action value=action>Action</option>
-            <option>Adventure</option>
-            <option>Strategy</option>
-            <option>RPG</option>
-            <option>Sports</option>
-        </select>
-        <select name="console" id="console">Pick your console
-            <option value='PC'>PC,Web,Linux</option>
-            <option value='macOS'>macOS, Android</option>
-            <option id='PS3'>Playstation 3</option>
-            <option>PlayStation 4</option>
-            <option id='ps5' value="ps5">PlayStation 5</option>
-            <option><i class="fas fa-nintendo-switch"></i>Nintendo Switch</option>
-            <option>Xbox One</option>
-        </select>
-        <select name="rating" id="rating">
-            <option id='everyone' value='everyone'>Everyone</option>
-            <option>Teen</option>
-            <option>Mature</option>
-        </select>
-        <select name="release" id="release">
-            <option value="yes"></option>
-        </select>
-        <select name="typicalDay" id="typicalDay"></select>
+        <div>
+            Genre:
+            <label for="searchInput" class="test"></label>
+            <select name="genres" id="genres">Pick a genre
+                <option id=action value=action>Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="strategy">Strategy</option>
+                <option value="rpg">RPG</option>
+                <option value="sports">Sports</option>
+            </select>
+        </div>
+        <div>
+            Console:
+            <select name="console" id="console">Pick your console
+                <option value='1'>PC,Web,Linux</option>
+                <option value='2'>macOS, Android</option>
+                <option value='3'>Playstation 3</option>
+                <option value="4">PlayStation 4</option>
+                <option value='5' value="ps5">PlayStation 5</option>
+                <option value='6'><i class="fas fa-nintendo-switch"></i>Nintendo Switch</option>
+                <option value='7'>Xbox One</option>
+            </select>
+        </div>
+        <div>Rating:
+            <select name="rating" id="rating">
+                <option id='everyone' value='everyone'>Everyone</option>
+                <option value='teen'>Teen</option>
+                <option value='mature'>Mature</option>
+            </select>
+        </div>
+        <div>Does the release date matter to you?
+            <select name="release" id="release">
+                <option value="yes">Yes, I want the newest and coolest.</option>
+                <option value="no">Nah, I'm old school bro.</option>
+            </select>
+            <!-- <select name="typicalDay" id="typicalDay"></select> -->
+            <input type="button" id="submit" name="submit" value="submit" />
     </form>
+    <div class="test"></div>
+
+
     <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 
