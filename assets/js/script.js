@@ -5,6 +5,9 @@ let genres = document.getElementById('genres').value;
 let rating = document.getElementById('rating').value;
 let platforms = document.getElementById('console').value;
 let test = document.querySelector('#test');
+let divEl = document.createElement('div');
+let divElTwo = document.createElement('div');
+divEl.setAttribute('class', 'democlass');
 
 //console.log(genres);
 
@@ -14,16 +17,20 @@ function getGames() {
 	)
 		.then((res) => res.json())
 		.then((data) => {
-        for (let i=0; i<data.results.length; i++){
-            let divEl = document.createElement("div");
-            test.append(divEl);
-            divEl.append(data.results[i].name)
-        }
-    })}
-        
+			for (let i = 0; i < data.results.length; i++) {
+				let results = data.results[i];
+				test.append(divEl);
+				divEl.append(results.name);
+				for (let p = 0; p < data.results[i].platforms.length; p++) {
+					divEl.append(results.platforms[p].platform.name);
+				}
+			}
+		});
+}
 
+//ended loop through 2nd platform array need to create
 
 button.addEventListener('click', function (e) {
 	e.preventDefault();
 	getGames();
-})
+});
