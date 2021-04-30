@@ -1,38 +1,40 @@
+/* styles for whole page */
 * {
   font-family: Andale Mono, monospace;
-  color: #a7c5eb;
+  color: #e3f2fd;
 }
-
+/* backgroung image style */
 .bg-image-container {
-  background-image: url("bg.jpg");
+  background-image: url("bg2.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-nav {
-  background-color: #28527a;
-
-  color: #a7c5eb;
   opacity: 0.75;
 }
+/* nav bar style */
+nav {
+  background-color: #0d47a1;
 
-.nav-logo {
-  border-radius: 5px;
-  height: 60px;
-  margin-bottom: 0 !important;
-  max-width: 60px;
-  width: 60px;
+  color: #e3f2fd;
 }
+
+.hero-body {
+  background-color: #1565c0;
+  opacity: 0.9;
+}
+/* drop-down-container positioning */
+
+/* button style */
 .dropbtn {
-  background-color: #8ac4d0;
-  color: #28527a;
+  background-color: #1976d2;
+  color: #e3f2fd;
   border-radius: 12px;
   font-size: 24px;
   padding: 15px 32px;
   text-align: center;
 }
+/* card style */
 #cards {
   opacity: 0.75;
 }
