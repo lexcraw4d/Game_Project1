@@ -1,0 +1,38 @@
+* {
+  font-family: Andale Mono, monospace;
+  color: #a7c5eb;
+}
+
+.bg-image-container {
+  background-image: url("bg.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+nav {
+  background-color: #28527a;
+
+  color: #a7c5eb;
+  opacity: 0.75;
+}
+
+.nav-logo {
+  border-radius: 5px;
+  height: 60px;
+  margin-bottom: 0 !important;
+  max-width: 60px;
+  width: 60px;
+}
+.dropbtn {
+  background-color: #8ac4d0;
+  color: #28527a;
+  border-radius: 12px;
+  font-size: 24px;
+  padding: 15px 32px;
+  text-align: center;
+}
+#cards {
+  opacity: 0.75;
+}
