@@ -1,9 +1,9 @@
 // selecting IDs from HTML
-const genreSel = document.getElementById("genre");
-const consoleSel = document.getElementById("console");
-const ratingSel = document.getElementById("rating");
-const releaseSel = document.getElementById("releaseDate");
-const playerSel = document.getElementById("players");
+let genreSel = document.getElementById("genre");
+let consoleSel = document.getElementById("console");
+let ratingSel = document.getElementById("rating");
+let releaseSel = document.getElementById("releaseDate");
+let playerSel = document.getElementById("players");
 
 // list of genre objects in an Array
 let genreObj = {
@@ -203,7 +203,10 @@ window.onload = function () {
       ratingSel.length = 1;
       relSelect.length = 1;
       singMultiPlayer.length = 1;
-      let z = (ratingSel.options[ratingSel.options.length] = new Option(z, z));
+      let z = ratingObj.ratingSel.value[this.value];
+        for (let i = 0; i < z.length; i++) {
+          ratingSel.options[ratingSel.options.length] = new Option(z[i], x[i]);
+        }
     };
   };
 };
