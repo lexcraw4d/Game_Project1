@@ -3,13 +3,25 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
         <title>Game Project</title>
-
     </head>
+
     <body>
         <header>
         <h1> 
             Game Project
+            <nav>
+                <!-- nav bar, dont know how many yet -->
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">-----</a></li>
+                    <li><a href="#">-----</a></li>
+                    <li><a href="#">-----</a></li>
+                </ul>
+            </nav>
         </h1>
         <nav>
             <ul>
@@ -57,39 +69,38 @@
             <div class="drop-down-container">
                 <div id ="tabs" class="drop-down hide">
                     <div id="check-box"></div>
-                    <select name="" id="">
+                    <select name="genre-container" id="">
                         Genre
-                        RPG
-                        STrategy
-                        Shooters
-                        Action
-                        MOBA
-                        MMORPG
-                        SAndbox
-                        Puzzles
-                        Results
-                        Survival
-                        Platofrmer
+                        <option value="">Select-Genre</option>
+                        <option value="">RPG</option>
+                        <option value="">Strategy</option>
+                        <option value="">Shooters</option>
+                        <option value="">Action</option>
+                        <option value="">MOBA</option>
+                        <option value="">MMORPG</option>
+                        <option value="">Sandbox</option>
+                        <option value="">Puzzlers</option>
+                        <option value="">RTS</option>
+                        <option value="">Survival</option>
+                        <option value="">Platformer</option>
                         <option value="">Genre type</option>
                     </select>
                     <select name="" id ="">
                         Console
-                        PC
-                        PS4
-                        Ps5
-                        Switch
-                        XBOX
-                        iOS
-                        Android
                         <option value="">Console type</option>
+                        <option value="">PC</option>
+                        <option value="">PS4</option>
+                        <option value="">PS5</option>
+                        <option value="">Switch</option>
+                        <option value="">Xbox</option>
                     </select>
                     <select name="" id="">
                         Rating
-                        EC
-                        E
-                        T
-                        M
-                        Adult
+                        <option value="">PC</option>
+                        <option value="">PS4</option>
+                        <option value="">PS5</option>
+                        <option value="">Switch</option>
+                        <option value="">Xbox</option>
                         <option value="">Rating type</option>
                     </select>
                     <select name ="" id="">
@@ -98,8 +109,8 @@
                     <select>
                         <option value ="">Solo or single player</option>
                     </select>
-
                 </div>
+                <button class="startButton hide">Get Game!</button>
               </div>
         </section>
        
@@ -148,3 +159,5 @@
                     </ul>
             </div>
         </section>
+        <script src="./assets/js/script.js"></script>
+    </body>
