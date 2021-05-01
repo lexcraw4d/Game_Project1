@@ -1,0 +1,16 @@
+html {
+  background-image: url("aboutus2.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0.75;
+}
+.hero {
+  opacity: 0.5;
+}
+
+.card {
+  margin-top: 100px;
+  opacity: 0.5;
+}
