@@ -23,22 +23,30 @@ function getGames() {
 				test.append(divEl);
 				divEl.append(results.name)
                 divEl.innerHTML += '<br>'
-                console(results)
+                consoleDevice(results)
                 background(results)
             }
-            function console(currentGame){
+            function consoleDevice(currentGame){
 				for (let p = 0; p < currentGame.platforms.length; p++) {
                     divEl.append(currentGame.platforms[p].platform.name);
                     divEl.innerHTML += '<br>'
 				}
             }
-            function background(image){
-                for (let b=0; b<image.length; b++){
-                    var images = document.createElement('img');
-                    images.setAttribute('src',image.background_image)
-                    divEl.append(img)
-                }
-            }
+            // function background(image){
+            //     for (let b=0; b<image.length; b++){
+            //         var images = document.createElement('img');
+            //         images.setAttribute('src',image.background_image)
+            //         divEl.append(images)
+            //     }
+            function background(image) {
+                var img = document.createElement('img');
+                img.width = "220"
+                img.height = "175"
+                img.src = image.background_image;
+                divEl.append(img);
+                divEl.innerHTML += '<hr>'
+            } 
+            
         }
             loopAgain()
 		});
