@@ -1,92 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- CSS Materialize -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Game Selector!</title>
+    <meta charset="UTF-8" />
+    <title>Game Project</title>
   </head>
-
   <body>
-    <!-- Header -->
     <header>
-      <nav id="" class="">
-        <!-- nav bar  -->
+      <h1>Game Project</h1>
+      <nav>
         <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">-----</a></li>
-          <li><a href="#">-----</a></li>
-          <li><a href="#">-----</a></li>
+          <li></li>
         </ul>
       </nav>
     </header>
 
-    <!-- Jumbotron -->
-    <section class="hero">
-      <div class="">
-        <!-- Jumbotron stuff-->
+    <!-- Introduction and user info-->
+    <section>
+      <h2>Find the perfect game for you!</h2>
+      <p>
+        seitan heirloom post-ironic pop-up iPhone mlkshk hella selfies fashion
+        axe occupy readymade put a bird on it messenger bag Wes Anderson Schlitz
+        plaid Bushwick church-key lo-fi skateboard slow-carb hashtag trust fund
+        Williamsburg biodiesel fixie farm-to-table 8-bit banjo XOXO Banksy
+        chillwave bicycle rights retro cliche tattooed bespoke irony mumblecore
+        Shoreditch deep v polaroid McSweeney's bitters cray gentrify tofu Marfa
+        you probably haven't heard of them yr banh mi asymmetrical art party
+        selvage letterpress High Life.
+      </p>
+      <div>
+        <form>
+          <label for="name">Enter full name</label>
+          <input
+            type="text"
+            placeholder="Your name"
+            id="name"
+            class="form-input"
+          />
+          <br /><br />
+          <label for="email">Enter email adress:</label>
+          <input
+            type="email"
+            placeholder="Email Address"
+            name="email"
+            id="email"
+            class="form-input"
+          />
+          <br /><br />
+          <label for="phone">Enter a telephone number:</label>
+          <input
+            type="tel"
+            placeholder="Phone Number"
+            name="phone"
+            id="phone"
+            class="form-input"
+          />
+          <br /><br />
+          <p>
+            <span class="">
+              <input type="" name="" id="" />
+              <label for=""></label>
+            </span>
+            <span class="">
+              <input type="" name="" id="" />
+              <label for=""></label>
+            </span>
+          </p>
+          <button type="">Get Game!</button>
+          <br /><br />
+        </form>
       </div>
     </section>
 
-    <!-- drop down container -->
-    <div class="container hide">
-      <!-- class hide is to display : hide; to hide the what is within container. -->
-      <div id="tabs" class="drop-down">
-        <div id="drop-down" class="genreStyles">
-          <!-- Genre  -->
-          <h1 class="title">Genre</h1>
-          <select name="genre-container" id="selectGenre">
-            <option value="rpg-option">RPG</option>
-            <option value="strategy-option">Strategy</option>
-            <option value="shooters-option">Shooters</option>
-            <option value="action-option">Action</option>
-            <option value="moba-option">MOBA</option>
-            <option value="mmmorpg-option">MMORPG</option>
-            <option value="sandbox-option">Sandbox</option>
-            <option value="puzzle-option">Puzzlers</option>
-            <option value="rts-option">RTS</option>
-            <option value="survival-option">Survival</option>
-            <option value="platform-option">Platformer</option>
-            <option value="sport-option">Sports</option>
-          </select>
+    <!-- Drop down container-->
+    <section>
+      <div class="drop-down-container">
+        <div id="tabs" class="drop-down hide">
+          <div id="check-box"></div>
+          <form
+            id="drop-selectors"
+            name="gameTypes"
+            action="/assets/js/script.js"
+          >
+            Genre:
+            <select name="genre" id="genre">
+              <option selected="selected" value="">-Select Here-</option>
+            </select>
+            <br /><br />
+            Consule:
+            <select name="console" id="console">
+              <option selected="selected" value="">-Select Here-</option>
+            </select>
+            <br /><br />
+            Rating:
+            <select name="rating" id="rating">
+              <option selected="selected" value="">-Select Here-</option>
+            </select>
+            <br /><br />
 
-          <!-- Console -->
-          <h1 class="title hide">Console</h1>
-          <select name="console-container" id="selectConsole" class="consoleStyles" >
-            <option value="pc-option">PC</option>
-            <option value="ps4-option">PS4</option>
-            <option value="ps5-option">PS5</option>
-            <option value="switch-option">Switch</option>
-            <option value="xbox-option">Xbox</option>
-          </select>
-
-          <!-- Does release date matter -->
-          <div>
-            <h1 class="title">Does Release Date matter to you?</h1>
-            <form id="releaseCheck" action="">
-              <input name="checkYes" type="checkbox" id="checkbox1" value="yes" />
-              <label for="checkYes">Yes</label><br />
-              <input name="checkNo" type="checkbox" id="checkbox2" value="no" />
-              <label for="checkNo">No</label><br />
-            </form>
-          </div>
-
-          <!-- Ratings -->
-          <h1 class="title">Rating</h1>
-          <select name="ratings" id="selectRatings" class="ratingStyles">
-            <option value="ec-option">EC-Early Childhood</option>
-            <option value="e-option">E-Everyone</option>
-            <option value="t-option">T-Teen</option>
-            <option value="m-option">M-mature</option>
-          </select>
-
-          <!-- Button for submitting -->
-          <button id="submitButton" class="submitButton hide">Get Game!</button>
+            Does Release date matter to you?
+            <select name="releaseDate" id="releaseDate">
+              <option selected="selected" value="">-Select Here-</option>
+            </select>
+            <br /><br />
+            Single or Multiplayer?
+            <select name="players" id="players">
+              <option selected="selected" value="">-Select Here-</option>
+            </select>
+          </form>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!--Highlights section-->
+    <section id="" class="">
+      <div class="">
+        <h2 class="">Popular Games</h2>
+        <ul>
+          <li>
+            <a href=""> Example 1 </a>
+          </li>
+          <li>
+            <a href=""> Example 2 </a>
+          </li>
+          <li>
+            <a href=""> Example 3 </a>
+          </li>
+        </ul>
+      </div>
+      <div class="">
+        <h2 class="">Highest Rated Games</h2>
+        <ul>
+          <li>
+            <a href=""> Example 1 </a>
+          </li>
+          <li>
+            <a href=""> Example 2 </a>
+          </li>
+          <li>
+            <a href=""> Example 3 </a>
+          </li>
+        </ul>
+      </div>
+      <div class="">
+        <h2>Recommened Games</h2>
+        <ul>
+          <li>
+            <a href=""> Example 1 </a>
+          </li>
+          <li>
+            <a href=""> Example 2 </a>
+          </li>
+          <li>
+            <a href=""> Example 3 </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
