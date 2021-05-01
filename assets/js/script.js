@@ -46,7 +46,11 @@ function getGames() {
 						var img = document.createElement('img');
 						img.width = '220';
 						img.height = '175';
-						img.src = image.background_image;
+                        if (image.background_image === null) {
+							img.src =
+								'https://media.moddb.com/cache/images/games/1/43/42826/thumb_620x2000/COMING_SOON.jpg';
+						} else img.src = image.background_image;
+					
 						divEl.append(img);
 						divEl.innerHTML += '<hr>';
 					}
