@@ -1,10 +1,9 @@
 html {
-  background-image: url("aboutus2.jpg");
+  background-image: url("pexels-markus-spiske-193350.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  opacity: 0.75;
 }
 .hero {
   opacity: 0.5;
