@@ -1,0 +1,15 @@
+html {
+  background-image: url("pexels-markus-spiske-193350.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.hero {
+  opacity: 0.5;
+}
+
+.card {
+  margin-top: 100px;
+  opacity: 0.5;
+}
