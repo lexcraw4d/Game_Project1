@@ -1,4 +1,43 @@
+/* styles for whole page */
 * {
-  box-sizing: border-box;
-  margin: auto;
+  font-family: Andale Mono, monospace;
+  color: #e3f2fd;
+}
+/* background image style */
+.bg-image-container {
+  background-image: url("bg3.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* nav bar style */
+nav {
+  background-color: #424242;
+
+  color: #f5f5f5;
+}
+
+.hero-body {
+  background-color: #616161;
+  opacity: 0.9;
+}
+
+/* .space {
+  padding: 65px;
+} */
+
+/* button style */
+button {
+  background-color: #616161;
+  color: #f5f5f5;
+  border-radius: 12px;
+  font-size: 17px;
+  padding: 10px 25px;
+  text-align: center;
+}
+
+/* card style */
+#cards {
+  opacity: 0.75;
 }
