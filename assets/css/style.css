@@ -5,12 +5,11 @@
 }
 /* backgroung image style */
 .bg-image-container {
-  background-image: url("bg2.jpg");
+  background-image: url("bg3.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  opacity: 0.75;
 }
 /* nav bar style */
 nav {
@@ -23,7 +22,10 @@ nav {
   background-color: #616161;
   opacity: 0.9;
 }
-/* drop-down-container positioning */
+
+/* .space {
+  padding: 65px;
+} */
 
 /* button style */
 button {
