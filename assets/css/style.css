@@ -23,6 +23,9 @@ nav {
   opacity: 0.9;
 }
 
+.subtitle {
+  text-justify: center;
+}
 /* .space {
   padding: 65px;
 } */
