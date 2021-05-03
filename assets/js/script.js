@@ -13,9 +13,19 @@ function saveFavorite() {
     localStorage.setItem("", JSON.stringify(saveUserData));
 
     let newSavedData1 = JSON.parse(localStorage.getItem(""))
-
 }
 
+$(document).ready(function() {
+    $("#---").change(function() {
+        localStorage.setItem('genre', $(this).val());
+        $('#---').value(localStorage.getItem('genre'));
+    });
+});
+
+if (localStorage.getItem('genre') === null) {
+    localStorage.setItem('genre', "");
+    document.write("option A")
+}
 
 
 
