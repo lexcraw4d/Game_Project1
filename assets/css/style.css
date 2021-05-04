@@ -12,24 +12,27 @@
 }
 /* nav bar style */
 .top-nav {
-  background-color: #424242;
-
-  color: #f5f5f5;
-}
-/* Add a black background color to the top navigation */
-.top-nav {
-  background-color: #333;
+  background-color: #3c434b;
   overflow: hidden;
+  color: #bec7b4;
 }
 
 /* Style the links inside the navigation bar */
 .top-nav a {
   float: right;
-  color: #f2f2f2;
+  color: #bec7b4;
   text-align: right;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 24px;
+}
+i {
+  float: left;
+  color: #bec7b4;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
 }
 
 /* Change the color of links on hover */
@@ -38,21 +41,14 @@
   color: #333333;
 }
 
-/* Add a color to the active/current link */
-.top-nav a.active {
-  background-color: #04aa6d;
-  color: white;
-}
-
 #hero {
   background-color: #5a636a;
-
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .row {
   display: table;
-  color: #000;
+  color: #3c434b;
   padding-left: 200px;
   /* table-layout:initial; Optional */
   border-spacing: 10px; /*Optional*/
@@ -61,11 +57,13 @@
   border-radius: 12px;
   display: table-cell;
   background-color: #97a9bd;
+  background-size: 1px;
   opacity: 0.8;
+  border-style: hidden;
 }
 .value {
   border-radius: 12px;
-  color: #000;
+  color: #3c434b;
 }
 
 .move {
