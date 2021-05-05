@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //API Calls to rawg.io
 document.addEventListener("DOMContentLoaded", function () {
   // code
@@ -136,7 +135,6 @@ if (localStorage.getItem("genre") === null) {
   // } else if (localStorage.getItem('genre') === "---") {
   //     document.write("fillout");
   // }
-=======
 /* eslint-disable no-undef */
 const button = document.getElementById('submit');
 let test = document.querySelector('#test');
@@ -210,7 +208,6 @@ function background(image, j) {
 	div.style = 'text-align: center;';
 	divEl.append(div);
 	divEl.innerHTML += '<hr>';
->>>>>>> ed963d2eb6e3a74f86e9b50a6b7a39cc32829b9a
 }
 //fetches YouTube API and appends results 
 function youTube(search, j) {
@@ -231,7 +228,6 @@ function youTube(search, j) {
 		},
 	});
 
-<<<<<<< HEAD
 //console storage
 
 if (localStorage.getItem("console") === null) {
@@ -293,7 +289,6 @@ if (localStorage.getItem("release") === null) {
     document.write("No");
   }
 }
-=======
 
 }
 
@@ -301,4 +296,3 @@ button.addEventListener('click', function (e) {
 	e.preventDefault();
 	getGames();
 });
->>>>>>> ed963d2eb6e3a74f86e9b50a6b7a39cc32829b9a
