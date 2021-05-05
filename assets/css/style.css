@@ -1,3 +1,102 @@
+<<<<<<< HEAD
 * {
   box-sizing: border-box;
 }
+=======
+/* styles for whole page */
+* {
+  font-family: Andale Mono, monospace;
+}
+/* background image style */
+.bg {
+  background-image: url("Screenshot 2021-05-03 111539.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* nav bar style */
+.top-nav {
+  background-color: #3c434b;
+  overflow: hidden;
+  color: #bec7b4;
+}
+
+/* Style the links inside the navigation bar */
+.top-nav a {
+  float: right;
+  color: #bec7b4;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
+}
+i {
+  float: left;
+  color: #bec7b4;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+/* Change the color of links on hover */
+.top-nav a:hover {
+  background-color: #ddd;
+  color: #333333;
+}
+
+#hero {
+  background-color: #5a636a;
+  opacity: 0.8;
+}
+
+.row {
+  display: table;
+  color: #3c434b;
+  padding-left: 200px;
+  /* table-layout:initial; Optional */
+  border-spacing: 10px; /*Optional*/
+}
+.column {
+  border-radius: 12px;
+  display: table-cell;
+  background-color: #97a9bd;
+  background-size: 1px;
+  opacity: 0.8;
+  border-style: hidden;
+}
+.value {
+  border-radius: 12px;
+  color: #3c434b;
+}
+
+.move {
+  padding-left: 475px;
+}
+
+.card-content {
+  background-color: #bec7b4;
+}
+
+.card-footer {
+  background-color: #bec7b4;
+}
+/* button style */
+
+/* .form-input {
+  background-color: #616161;
+  color: black;
+  border-radius: 12px;
+  font-size: 17px;
+  padding: 10px 25px;
+  text-align: center;
+} */
+
+/* card style */
+/* #cards {
+  opacity: 0.75; */
+/* height: 100%;
+  display: flex;
+  flex-direction: column; */
+>>>>>>> 2bfa5604b14348ae241ce7ec994b93c6bf949881
