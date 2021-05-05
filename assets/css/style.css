@@ -12,12 +12,17 @@
 }
 /* background image style */
 <<<<<<< HEAD
+<<<<<<< HEAD
 .bg-image-container {
   background-image: url("bg3.jpg");
 =======
 .bg {
   background-image: url("Screenshot 2021-05-03 111539.jpg");
 >>>>>>> joshuaN
+=======
+.bg {
+  background-image: url("./background.jpg");
+>>>>>>> ed963d2eb6e3a74f86e9b50a6b7a39cc32829b9a
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -55,6 +60,7 @@ i {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .subtitle {
   text-justify: center;
 }
@@ -62,6 +68,8 @@ i {
   padding: 65px;
 } */
 =======
+=======
+>>>>>>> ed963d2eb6e3a74f86e9b50a6b7a39cc32829b9a
 #hero {
   background-color: #5a636a;
   opacity: 0.8;

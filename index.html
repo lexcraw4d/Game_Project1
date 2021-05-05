@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -63,90 +64,109 @@
             <form>
                 <label for="name">Enter full name</label>
                 <input type="text" placeholder="Your name" id="name" class="form-input"/>
+=======
 
-                <label for="email">Enter email adress:</label>
-                <input type="email" placeholder="Email Address" name="email" id="email" class="form-input"/>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- css fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha383-50oBUHEmvpQ+1lW3y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <!-- CSS Bulma -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/about-us.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+>>>>>>> ed963d2eb6e3a74f86e9b50a6b7a39cc32829b9a
 
-                 <label for="phone">Enter a telephone number:</label>
-                <input type="tel" placeholder="Phone Number" name="phone" id="phone" class="form-input" />
-                <p>
-                    <span class="">
-                        <input type="" name="" id="" />
-                        <label for=""></label>
-                    </span>
-                    <span class="">
-                        <input type="" name="" id="" />
-                        <label for=""></label>
-                    </span>
-                </p>
-                <button type="">
-                </button>
-            </form> 
-            </div> -->
+  <title>Gaminator</title>
+</head>
 
-      <form class="dropdown-content">
-        <div>
-          Genre:
+<body>
+  <header>
+    <!-- nav bar  -->
+
+    <div class="top-nav">
+      <i class="fas fa-gamepad fa-3x" style="color: #bec7b4"></i>
+
+      <a href="./about-us.html" style="color: #bec7b4">About Us</a>
+    </div>
+  </header>
+  <!--Title and instructions-->
+  <section id="hero" class="hero is-small is-primary">
+    <div class="hero-body">
+      <p class="title">Gaminator</p>
+      <p class="subtitle">
+        1.<br />
+        2.<br />
+        3.<br />
+      </p>
+    </div>
+  </section>
+  <!--dropdown begins-->
+  <div class="bg">
+    <div class="row">
+      <form class="example">
+        <div class="column">
+          <!-- Genre: -->
           <label for="searchInput" class="test"></label>
-          <select name="genres" id="genres">
+          <select style="background-color: #bec7b4" name="genres" id="genres">
             Pick a genre
+            <option value="">Genre</option>
             <option value="action">Action</option>
             <option value="adventure">Adventure</option>
             <option value="strategy">Strategy</option>
             <option value="rpg">RPG</option>
             <option value="sports">Sports</option>
+            <option value="puzzle">Puzzle</option>
           </select>
         </div>
-        <div>
-          Platform:
-          <select name="console" id="console">
+        <div class="column">
+          <!-- Console: -->
+          <select style="background-color: #bec7b4" name="console" id="console">
             Pick your console
-            <option value="4,6">PC,Web,Linux</option>
-            <option value="21,5">macOS, Android</option>
-            <option value="2">Playstation</option>
-            <option value="15">Playstation 2</option>
-            <option value="3">Playstation 3</option>
-            <option value="4">PlayStation 4</option>
-            <option value="187">PlayStation 5</option>
-            <option value="7">Nintendo Switch/Nintendo</option>
-            <option value="10,11">Wii/Wii U</option>
-            <option value="3">Xbox</option>
-            <option value="1">Xbox One</option>
-            <option value="186">Xbox Series S/X</option>
+            <option value="" selected="selected">Console</option>
+            <option value='4,6'>PC,Web,Linux</option>
+            <option value='21,5'>macOS, Android</option>
+            <option value='2'>Playstation </option>
+            <option value='15'>Playstation 2 </option>
+            <option value='16'>Playstation 3</option>
+            <option value="18">PlayStation 4</option>
+            <option value='187'>PlayStation 5</option>
+            <option value='7'>Nintendo Switch/Nintendo</option>
+            <option value='10,11'>Wii/Wii U</option>
+            <option value='3'>Xbox</option>
+            <option value='1'>Xbox One</option>
+            <option value='14'>Xbox 360</option>
+            <option value='186'>Xbox Series S/X</option>
+            <option value='83'>Nintendo 64</option>
           </select>
         </div>
-        <div>
-          Rating:
-          <select name="rating" id="rating">
+        <div class="column">
+          <!-- Rating: -->
+          <select style="background-color: #bec7b4" name="rating" id="rating">
+            <option value="">Rating</option>
             <option id="everyone" value="everyone">Everyone</option>
             <option value="teen">Teen</option>
             <option value="mature">Mature</option>
           </select>
         </div>
-        <div>
-          Does the release date matter to you?
-          <select name="release" id="release">
+        <div class="column">
+          <!-- Does the release date matter to you? -->
+          <select style="background-color: #bec7b4" name="release" id="release">
+            <option style="color: black" value="">
+              Does the release date matter to you?
+            </option>
             <option value="yes">Yes, I want the newest and coolest.</option>
             <option value="no">Nah, I'm old school bro.</option>
           </select>
         </div>
-        <input type="button" id="submit" name="submit" value="submit" />
-        <div id="test">Game information displayed here:</div>
-      </form>
-      
-      <div class="drop-down-container">
-        <div class="dropdown">
-          <button class="dropbtn">Genre</button>
-          <div class="dropdown-content"></div>
+        <div class="column">
+          <input type="button" id="submit" name="submit" value="Submit" class="column" />
         </div>
-        <div class="dropdown">
-          <button class="dropbtn">Console</button>
-          <div class="dropdown-content"></div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">Release Date</button>
-          <div class="dropdown-content"></div>
-        </div>
+<<<<<<< HEAD
         <div class="dropdown">
           <button class="dropbtn">Rating</button>
           <div class="dropdown-content"></div>
@@ -263,66 +283,76 @@
       </div>
       <div class="move">
         <div class="column" id="test">Game information displayed here:</div>
+=======
+      </form>
+    </div>
+    <div class="move">
+      <div class="column" id="test">Game information displayed here:</div>
+      <div id="videoEl">
+        <iframe id='ytubeid'></iframe>
+>>>>>>> ed963d2eb6e3a74f86e9b50a6b7a39cc32829b9a
       </div>
-      <!--Highlights section-->
-      <section id="cards is-justify-content-right ">
-        <div class="columns">
-          <div class="column is-3 is-offset-9">
-            <div class="card m-1">
-              <div class="card-content">
-                <p class="title">Popular Games</p>
-              </div>
-              <footer class="card-footer">
-                <p class="card-footer-item">
-                  <span>
-                    Check Out:
-                    <a href="https://www.destructoid.com/" target="blank"
-                      >Destructoid</a
-                    >
-                  </span>
-                </p>
-                <p class="card-footer-item">
-                  <span>
-                    Check Out:
-                    <a href="https://www.gamesradar.com/" target="blank"
-                      >gamesradar</a
-                    >
-                  </span>
-                </p>
-              </footer>
+    </div>
+    <!--Highlights section-->
+    <section id="cards is-justify-content-right ">
+      <div class="columns">
+        <div class="column is-3 is-offset-9">
+          <div class="card m-1">
+            <div class="card-content">
+              <p class="title">Popular Games</p>
             </div>
+            <footer class="card-footer">
+              <p class="card-footer-item">
+                <span>
+                  Check Out:
+                  <a href="https://www.destructoid.com/" target="blank">Destructoid</a>
+                </span>
+              </p>
+              <p class="card-footer-item">
+                <span>
+                  Check Out:
+                  <a href="https://www.gamesradar.com/" target="blank">gamesradar</a>
+                </span>
+              </p>
+            </footer>
           </div>
         </div>
-        <!--cards with links-->
-        <div class="columns">
-          <div class="column is-3 is-offset-9">
-            <div class="card is-justify-content-right">
-              <div class="card-content">
-                <p class="title">Highest Rated Games</p>
-              </div>
-              <footer class="card-footer">
-                <p class="card-footer-item">
-                  <span>
-                    Check Out:
-                    <a href="https://www.gameinformer.com/" target="blank"
-                      >gameinformer</a
-                    >
-                  </span>
-                </p>
-                <p class="card-footer-item">
-                  <span>
-                    Check Out:
-                    <a href="https://www.metacritic.com/game" target="blank"
-                      >metacritic</a
-                    >
-                  </span>
-                </p>
-              </footer>
+      </div>
+      <!--cards with links-->
+      <div class="columns">
+        <div class="column is-3 is-offset-9">
+          <div class="card is-justify-content-right">
+            <div class="card-content">
+              <p class="title">Highest Rated Games</p>
             </div>
+            <footer class="card-footer">
+              <p class="card-footer-item">
+                <span>
+                  Check Out:
+                  <a href="https://www.gameinformer.com/" target="blank">gameinformer</a>
+                </span>
+              </p>
+              <p class="card-footer-item">
+                <span>
+                  Check Out:
+                  <a href="https://www.metacritic.com/game" target="blank">metacritic</a>
+                </span>
+              </p>
+            </footer>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
     </div>
     <script type="text/javascript" src="./assets/js/script.js"></script>
   </body>
 </html>
+=======
+      </div>
+    </section>
+  </div>
+  <script type="text/javascript" src="./assets/js/script.js"></script>
+</body>
+
+</html>
+>>>>>>> ed963d2eb6e3a74f86e9b50a6b7a39cc32829b9a
