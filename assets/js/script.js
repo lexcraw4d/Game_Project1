@@ -139,8 +139,7 @@ if (localStorage.getItem('release') === null) {
 
 // lexis API javascript
 
-//API Calls to rawg.io
-
+/* eslint-disable no-undef */
 const button = document.getElementById('submit');
 let test = document.querySelector('#test');
 let release = document.querySelector('#release');
@@ -152,7 +151,8 @@ function getData(usersInput) {
 	fetch(usersInput)
 		.then((res) => res.json())
 		.then((data) => {
-			for (let i = 0; i < data.results.length; i++) {
+			//data.results.length --> can put this in place of "i" here, but uses up all of API key in two runs of the app
+			for (let i = 0; i < 5; i++) {
 				let results = data.results[i];
 				console.log(results);
 				test.append(divEl);
@@ -167,17 +167,19 @@ function getData(usersInput) {
 			}
 		});
 }
-
+//Passes in results at each index and loops within those results to retrieve the consoles for each game
 function consoleDevice(currentGame) {
 	for (let p = 0; p < currentGame.platforms.length; p++) {
 		divEl.append(currentGame.platforms[p].platform.name);
 		divEl.innerHTML += '<br>';
 	}
 }
+//initial call when the submit button is clicked gathers all the information based off the user's input values
 function getGames() {
 	let genres = document.getElementById('genres').value;
 	let rating = document.getElementById('rating').value;
 	let platforms = document.getElementById('console').value;
+	//if release date is of importance, appends that portion to the url for the fetch fx to call
 	let releaseDatesImp = {
 		yesUrl: `https://api.rawg.io/api/games?key=f4d775e86a54401da676771c802f8d33&ordering=-metacritic&genres=${genres}&platforms=${platforms}&rating=${rating}&ordering=-released`,
 		noURL: `https://api.rawg.io/api/games?key=f4d775e86a54401da676771c802f8d33&ordering=-metacritic&genres=${genres}&platforms=${platforms}&rating=${rating}`,
@@ -186,21 +188,24 @@ function getGames() {
 		release.options[release.selectedIndex].value == 'no'
 			? releaseDatesImp.noURL
 			: releaseDatesImp.yesUrl;
+	//pass through the user's choice for fetch to know which url to call
 	getData(userSelection);
 }
+//passes through the image from Rawg.io at each index [j] - creates img
 function background(image, j) {
 	var img = document.createElement('img');
 	var imgdiv = document.createElement('div');
 
-	img.width = '220';
-	img.height = '175';
-	img.style = 'margin-left: 6em;';
+	img.width = '300';
+	img.height = '150';
+	img.style = 'text-align:center;';
+	//no image response -> default img
 	if (image.background_image === null) {
 		img.src =
-			'https://media.moddb.com/cache/images/games/1/43/42826/thumb_620x2000/COMING_SOON.jpg';
+			'https://www.victoriabox.ca/img/no-product-img.png';
 	} else img.src = image.background_image;
 	imgdiv.append(img);
-
+	
 	divEl.append(imgdiv);
 
 	var div = document.createElement('div');
@@ -209,44 +214,26 @@ function background(image, j) {
 	divEl.append(div);
 	divEl.innerHTML += '<hr>';
 }
-// function wikiSearch (searchName){
-// fetch(`https://en.wikipedia.org/w/api.php?&origin=*&action=opensearch&search=${searchName}&limit=5`).then(function(resp) {
-//     console.log(resp);
-//     return resp.json()
-// }).then(function(data) {
-//     console.log(data);
-// })
-// }
+//fetches YouTube API and appends results 
 function youTube(search, j) {
 	let platformSearch = $('#console option:selected').text();
 	$.ajax({
-		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyDhBNSQeAeCHnA5px4fulybDjeKJooQKR4`,
+		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyBruZq06On9TatHO6gb_5bkeigvWhG0ZGQ`,
 		type: 'GET',
 		dataType: 'jsonp',
 		cache: false,
 		success: function (response) {
 			var data = response;
 
-			if (data.items.length > 0) {
+			// if (response.items.length >0 ) {
 				let videoId = data.items[0].id.videoId;
 				$('<iframe>', { src: 'https://www.youtube.com/embed/' + videoId }).appendTo($('#div' + j));
 				console.log(videoId + 'HERE IS VIDEO ID');
-			}
+			// }
 		},
 	});
 
-	// // document.getElementById('console').text();
-	// fetch(
-	// 	`https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=fortnite%20tutorial%20ps4&key=AIzaSyAyX6mNT5_rCoSyPnqIPljCmoAv0b2Pyf8`
-	// )
-	// 	//
-	// 	// https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=fortnite%20tutorial%20ps4&key=AIzaSyAyX6mNT5_rCoSyPnqIPljCmoAv0b2Pyf8`
-	// 	//.then((res) => res.json())
-	// 	.then((data) => {
-	// 		for (let i = 11; i < 11; i++) {
 
-	// 		}
-	// 	});
 }
 
 button.addEventListener('click', function (e) {
