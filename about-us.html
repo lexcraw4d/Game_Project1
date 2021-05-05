@@ -16,109 +16,167 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
     />
-    <!-- CSS Materialize -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
+
     <link rel="stylesheet" href="./assets/css/about-us.css" />
     <title>About Us</title>
   </head>
   <body>
     <header>
-      <section class="hero is-small is-primary green lighten-1">
+      <!---nav bar-->
+      <section
+        class="hero is-small is-primary"
+        style="background-color: #3a3d44; color: #dbd8b9"
+      >
         <div class="hero-body">
-          <p class="title">About Us</p>
-          <a href="./index.html">Home</a>
+          <ul class="topnav">
+            <li><a class="active left" href="./index.html">Home</a></li>
+
+            <li class="right"><a href="#about">About Us</a></li>
+          </ul>
         </div>
       </section>
     </header>
     <main>
-      <div class="card-container" id="card-form">
+      <div class="columns">
         <!-- derrick -->
-        <div class="row">
-          <div class="col s3">
-            <div class="card">
-              <div class="card-image">
-                <img src="images/sample-1.jpg" />
+
+        <div class="column">
+          <div class="card is-one-quarter">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="./assets/images/20191004_185128.jpg"
+                      alt="Placeholder image"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">Derrick Huggins</p>
+                  <p class="subtitle is-6">
+                    <a href="mailto:dhuggins221@gmail.com"
+                      >dhuggins221@gmail.com</a
+                    >
+                  </p>
+                </div>
               </div>
-              <div class="card-content">
-                <span class="card-title">Derrick Huggins</span>
-                <p>
-                  I am a very simple card. I am good at containing small bits of
-                  information. I am convenient because I require little markup
-                  to use effectively.
-                </p>
-              </div>
-              <div class="card-action">
-                <a href="">LinkedIn</a>
-                <a href="">Github</a>
+
+              <div class="content">
+                My name is Derrick Huggins and my passions are basketball, video
+                games, cooking, and coding. With a background in the hospitality
+                industry I am always ready to help and serve! <br />
+                <a href="https://www.linkedin.com/in/derrick-huggins-aa5226201"
+                  >LinkedIn</a
+                ><a href="https://github.com/dhuggins221"> Github</a>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- josh -->
+        <!-- josh -->
 
-          <div class="col s3">
-            <div class="card">
-              <div class="card-image">
-                <img src="images/sample-1.jpg" />
+        <div class="column">
+          <div class="card is-one-quarter">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="./assets/images/1617491326909.jpg"
+                      alt="Placeholder image"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">Josh Nguyen</p>
+                  <p class="subtitle is-6">
+                    <a href="mailto:joshuatvn@gmail.com">joshuatvn@gmail.com</a>
+                  </p>
+                </div>
               </div>
-              <div class="card-content">
-                <span class="card-title">Joshua Nguyen</span>
-                <p>
-                  I am a very simple card. I am good at containing small bits of
-                  information. I am convenient because I require little markup
-                  to use effectively.
-                </p>
-              </div>
-              <div class="card-action">
-                <a href="">LinkedIn</a>
-                <a href="">Github</a>
+
+              <div class="content">
+                7+ Years in the Food industry and Customer Service. Certified
+                AutoCAD Drafter, Went to Horn Drafting and CAD center Currently
+                in UT Austin Coding Bootcamp, graduation (August 2021)<br />
+                <a href="https://www.linkedin.com/in/joshua-nguyen-3576561bb/"
+                  >LinkedIn</a
+                ><a href="https://github.com/JOSHUATVN"> Github</a>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- lexie -->
+        <!-- lexie -->
 
-          <div class="col s3">
-            <div class="card">
-              <div class="card-image">
-                <img src="images/sample-1.jpg" />
+        <div class="column">
+          <div class="card is-one-quarter">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="./assets/images/image.jpg"
+                      alt="Placeholder image"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">Lexie Crawford</p>
+                  <p class="subtitle is-6"></p>
+                  <a href="mailto:lexcraw4d@gmail.com">lexcraw4d@gmail.com</a>
+                </div>
               </div>
-              <div class="card-content">
-                <span class="card-title">Lexie Crawford</span>
-                <p>
-                  I am a very simple card. I am good at containing small bits of
-                  information. I am convenient because I require little markup
-                  to use effectively.
-                </p>
-              </div>
-              <div class="card-action">
-                <a href="">LinkedIn</a>
-                <a href="">Github</a>
+
+              <div class="content">
+                I am an experienced Full-Stack Web Developer skilled at
+                programming dynamic web applications. I am a dedicated team
+                player that brings positive energy, and strong problem solving
+                skills.<br />
+                <a
+                  href="https://www.linkedin.com/checkpoint/challengesV2/AQF7ElDdPbGg2QAAAXk0w7VfTtjxx_Y5cyR0vX0jaosnOmzeRv8jL6vF9VBijUmpmr20SXjhWomh_lFzXvTCgATAzcT4DJgUUg?original_referer=https%3A%2F%2Flexcraw4d.github.io%2F"
+                  >LinkedIn</a
+                ><a href="https://github.com/lexcraw4d"> Github</a>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- rachel -->
+        <!-- rachel -->
 
-          <div class="col s3">
-            <div class="card">
-              <div class="card-image">
-                <img src="images/sample-1.jpg" />
+        <div class="column">
+          <div class="card is-one-quarter">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="./assets/images/IMG_2219.jpg"
+                      alt="Placeholder image"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">Rachel Solov</p>
+                  <p class="subtitle is-6"></p>
+                  <a href="mailto:rsolov23@yahoo.com">rsolov23@yahoo.com</a>
+                </div>
               </div>
-              <div class="card-content">
-                <span class="card-title">Rachel Solov</span>
-                <p>
-                  I am a very simple card. I am good at containing small bits of
-                  information. I am convenient because I require little markup
-                  to use effectively.
-                </p>
-              </div>
-              <div class="card-action">
-                <a href="">LinkedIn</a>
-                <a href="">Github</a>
+
+              <div class="content">
+                Motivated Web Developer with strong creative skills. Mastering
+                the art of HTML, CSS and JavaScript.<br />
+
+                <footer class="card-footer">
+                  <br />
+                  <a href="https://www.linkedin.com/in/rachel-solov-80bb3a174"
+                    >LinkedIn</a
+                  >
+                  <br />
+                  <a href="https://github.com/rsolov23"> Github</a>
+                  <br />
+                </footer>
               </div>
             </div>
           </div>
