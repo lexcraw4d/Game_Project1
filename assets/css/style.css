@@ -1,28 +1,10 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-* {
-  box-sizing: border-box;
-}
-=======
->>>>>>> joshuaN
 /* styles for whole page */
 * {
   font-family: Andale Mono, monospace;
 }
 /* background image style */
-<<<<<<< HEAD
-<<<<<<< HEAD
-.bg-image-container {
-  background-image: url("bg3.jpg");
-=======
 .bg {
   background-image: url("Screenshot 2021-05-03 111539.jpg");
->>>>>>> joshuaN
-=======
-.bg {
-  background-image: url("./background.jpg");
->>>>>>> ed963d2eb6e3a74f86e9b50a6b7a39cc32829b9a
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -59,22 +41,10 @@ i {
   color: #333333;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.subtitle {
-  text-justify: center;
-}
-/* .space {
-  padding: 65px;
-} */
-=======
-=======
->>>>>>> ed963d2eb6e3a74f86e9b50a6b7a39cc32829b9a
 #hero {
   background-color: #5a636a;
   opacity: 0.8;
 }
->>>>>>> joshuaN
 
 .row {
   display: table;
@@ -119,15 +89,8 @@ i {
 } */
 
 /* card style */
-<<<<<<< HEAD
-#cards {
-  opacity: 0.75;
-}
-=======
 /* #cards {
   opacity: 0.75; */
 /* height: 100%;
   display: flex;
   flex-direction: column; */
->>>>>>> 2bfa5604b14348ae241ce7ec994b93c6bf949881
->>>>>>> joshuaN
