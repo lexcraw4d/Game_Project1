@@ -1,11 +1,3 @@
-// Game Project 1
-
-// Create Logo top/left/right/centered side of web page
-
-// Discuss layout of the page (skeleton HTML) figure out how the page will function.
-
-// ?? Have Nav tabs for generes ?? , ?? Scroll tab for genere ??
-// About Us/ ???? / ???? / ????
 
 ![A screenshot of the web page](.png)
 
@@ -34,7 +26,10 @@
 ### Link to my Application : https://lexcraw4d.github.io/Game_Project1/
 
 ### Contributors
-https://github.com/lexcraw4d
+https://github.com/lexcraw4d 
+
 https://github.com/rsolov23
+
 https://github.com/JOSHUATVN
+
 https://github.com/dhuggins221
