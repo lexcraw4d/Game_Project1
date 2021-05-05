@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-* {
-  box-sizing: border-box;
-}
-=======
 /* styles for whole page */
 * {
   font-family: Andale Mono, monospace;
 }
 /* background image style */
-.bg {
-  background-image: url("Screenshot 2021-05-03 111539.jpg");
+html {
+  background-image: url("Screenshot 2021-05-05 151217.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -37,18 +32,19 @@ i {
   text-align: right;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 24px;
 }
 
 /* Change the color of links on hover */
 .top-nav a:hover {
   background-color: #ddd;
-  color: #333333;
 }
-
+.hero {
+  opacity: 0.9;
+}
 #hero {
   background-color: #5a636a;
   opacity: 0.8;
+  color: #dbd8b9;
 }
 
 .row {
@@ -99,4 +95,3 @@ i {
 /* height: 100%;
   display: flex;
   flex-direction: column; */
->>>>>>> 2bfa5604b14348ae241ce7ec994b93c6bf949881
