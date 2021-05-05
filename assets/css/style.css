@@ -4,7 +4,7 @@
 }
 /* background image style */
 .bg {
-  background-image: url("./background.jpg");
+  background-image: url("../css/background.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

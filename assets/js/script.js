@@ -77,7 +77,7 @@ function background(image, j) {
 function youTube(search, j) {
 	let platformSearch = $('#console option:selected').text();
 	$.ajax({
-		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyB_Yi_pjiu7ycRVtvnxf2bgY2EAWbzdCDg`,
+		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyAajmBQDCqMUw-mID27rjfW-UXUYq8HTUs`,
 		type: 'GET',
 		dataType: 'jsonp',
 		cache: false,
