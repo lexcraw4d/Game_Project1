@@ -10,7 +10,8 @@ function getData(usersInput) {
 	fetch(usersInput)
 		.then((res) => res.json())
 		.then((data) => {
-			for (let i = 0; i < data.results.length; i++) {
+			//data.results.length --> can put this in place of "i" here, but uses up all of API key in two runs of the app
+			for (let i = 0; i < 5; i++) {
 				let results = data.results[i];
 				console.log(results);
 				test.append(divEl);
@@ -54,13 +55,13 @@ function background(image, j) {
 	var img = document.createElement('img');
 	var imgdiv = document.createElement('div');
 
-	img.width = '220';
-	img.height = '175';
-	img.style = 'margin-left: 3em;';
+	img.width = '300';
+	img.height = '150';
+	img.style = 'text-align:center;';
 	//no image response -> default img
 	if (image.background_image === null) {
 		img.src =
-			'https://media.moddb.com/cache/images/games/1/43/42826/thumb_620x2000/COMING_SOON.jpg';
+			'https://www.victoriabox.ca/img/no-product-img.png';
 	} else img.src = image.background_image;
 	imgdiv.append(img);
 	
@@ -76,18 +77,18 @@ function background(image, j) {
 function youTube(search, j) {
 	let platformSearch = $('#console option:selected').text();
 	$.ajax({
-		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyB_Yi_pjiu7ycRVtvnxf2bgY2EAWbzdCDg`,
+		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyBruZq06On9TatHO6gb_5bkeigvWhG0ZGQ`,
 		type: 'GET',
 		dataType: 'jsonp',
 		cache: false,
 		success: function (response) {
 			var data = response;
 
-			if (response.items.length > 0) {
+			// if (response.items.length >0 ) {
 				let videoId = data.items[0].id.videoId;
 				$('<iframe>', { src: 'https://www.youtube.com/embed/' + videoId }).appendTo($('#div' + j));
 				console.log(videoId + 'HERE IS VIDEO ID');
-			}
+			// }
 		},
 	});
 
