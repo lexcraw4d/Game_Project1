@@ -12,105 +12,67 @@
       crossorigin="anonymous"
     />
     <!-- CSS Bulma -->
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
-<<<<<<< HEAD
     />
-
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Document</title>
-=======
-    /> -->
-    <!-- CSS Materialize -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    /> -->
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Game-inator</title>
->>>>>>> 511db75a6c66d53394d85be644381b68d13bf488
+    <title>Gaminator</title>
   </head>
   <body>
     <header>
+      <!-- <div class="bgSizeContain"></div> -->
       <!-- nav bar  -->
 
-      <div class="top-nav">
-        <i class="fas fa-gamepad fa-3x"></i>
-
-        <a href="./about-us.html" style="color: #f5f5f5">About Us</a>
-      </div>
-    </header>
-<<<<<<< HEAD
-    <!-- <div class="bg-image-container"> -->
-    <!-- Jumbotron -->
-
-    <!-- <div class="hero-body is-small is-primary">
-      <p class="title" style="color: #e3f2fd">Game-inator</p>
-      <p class="subtitle" style="color: #e3f2fd">
-        1.<br />
-        2.<br />
-        3.<br />
-        3.<br />
-        5.<br />
-      </p>
-    </div> -->
-
-=======
-    <div class="bg-image-container">
-      <!-- Jumbotron -->
-      <section class="jumbotron">
+      <section
+        class="hero is-small is-primary"
+        style="background-color: #3c434b; color: #dbd8b9"
+      >
         <div class="hero-body">
-          <p class="title" style="color: #e3f2fd">
-            Find the perfect game for you!
-          </p>
-          <p class="subtitle" style="color: #e3f2fd">
-           Welcome to our Game Selector! <br>
-           Our goal is to help decide what games you want to play. <br>
-            Follow the following steps! <br>
-            Step 1 : Pick your genre, platform, and rating! <br>
-            Step 2 : Now choose if you want the most up to date game or old school! <br>  
-            Step 3 : Get games! <br>
-          </p>
+          <ul class="top-nav">
+            <li class="left">
+              <i
+                style="color: #bec7b4"
+                class="fas fa-gamepad fa-3x"
+                style="color: #bec7b4"
+                >Gaminator</i
+              >
+            </li>
+
+            <li class="right">
+              <a href="./about-us.html" style="color: #bec7b4">About Us</a>
+            </li>
+
+            <li class="right"><a href="">Favorites</a></li>
+          </ul>
         </div>
       </section>
-
+    </header>
     <!--Title and instructions-->
->>>>>>> 511db75a6c66d53394d85be644381b68d13bf488
     <section id="hero" class="hero is-small is-primary">
       <div class="hero-body">
-        <p class="title">Game-inator</p>
-        <p class="subtitle">
-<<<<<<< HEAD
-          1.<br />
-          2.<br />
-          3.<br />
+        <p>
+          Welcome to Gaminator! The gaming industry is booming, meaning there
+          are tons of great and innovative games consistently being released. As
+          the technology improves more and more people are both gaining access
+          and interest to all of the new and exciting video games coming out.
+          However with over 1 million games available it can be a daunting task
+          for a newcomer to find the right game for them. With the help of
+          Gaminator newcomers like yourself can find the right games with these
+          simple steps: <br />
         </p>
-      </div>
-    </section>
-
-=======
-          Welcome to Game-inator! <br>
-          Our goal is to help decide what games you want to play. <br>
-          Follow the following steps!
-          Step 1: Select genre, platform, and rating  <br />
-          Step 2: Do you want newly released games? Single or Multiplayer <br />
-          Step 3: Get Game!<br />
-          Step 4: Pick your game! <br>
-        </p>
+        1. Choose your answer in the each of the four dropdown menus <br />
+        2. Hit the submit button <br />
+        3. View the games our algorithm suggests
       </div>
     </section>
     <!--dropdown begins-->
->>>>>>> 511db75a6c66d53394d85be644381b68d13bf488
     <div class="bg">
       <div class="row">
         <form class="example">
           <div class="column">
             <!-- Genre: -->
             <label for="searchInput" class="test"></label>
-<<<<<<< HEAD
             <select style="background-color: #bec7b4" name="genres" id="genres">
               Pick a genre
               <option value="">Genre</option>
@@ -134,44 +96,20 @@
             </select>
           </div>
           <div class="column">
-=======
-          <select style="background-color: #bec7b4" name="genres" id="genres">
-            Pick a genre
-            <option value="">Genre</option>
-            <option value="action">Action</option>
-            <option value="adventure">Adventure</option>
-            <option value="strategy">Strategy</option>
-            <option value="rpg">RPG</option>
-            <option value="sports">Sports</option>
-            <option value="puzzle">Puzzle</option>
-          </select>
-        </div>
-        <div class="column">
->>>>>>> 511db75a6c66d53394d85be644381b68d13bf488
             <!-- Console: -->
             <select
               style="background-color: #bec7b4"
               name="console"
               id="console"
             >
-<<<<<<< HEAD
               Pick your console
               <option value="">Console</option>
               <option value="3,6">PC,Web,Linux</option>
-=======
-              Pick your platform
-              <option value="">Console</option>
-              <option value="4,6">PC,Web,Linux</option>
->>>>>>> 511db75a6c66d53394d85be644381b68d13bf488
               <option value="21,5">macOS, Android</option>
               <option value="2">Playstation</option>
               <option value="15">Playstation 2</option>
               <option value="3">Playstation 3</option>
-<<<<<<< HEAD
               <option value="3">PlayStation 3</option>
-=======
-              <option value="4">PlayStation 4</option>
->>>>>>> 511db75a6c66d53394d85be644381b68d13bf488
               <option value="187">PlayStation 5</option>
               <option value="7">Nintendo Switch/Nintendo</option>
               <option value="10,11">Wii/Wii U</option>
@@ -204,27 +142,19 @@
             </select>
           </div>
           <div class="column">
-<<<<<<< HEAD
             <input
               type="button"
               id="submit"
               name="submit"
-              value="submit"
+              value="Submit"
               class="column"
             />
           </div>
-=======
-            <input type="button" id="submit" name="submit" value="submit" class="column"
-            />
-          </div>
-          <div id="test">"Game Information displayed here:</div>
->>>>>>> 511db75a6c66d53394d85be644381b68d13bf488
         </form>
       </div>
       <div class="move">
         <div class="column" id="test">Game information displayed here:</div>
       </div>
-<<<<<<< HEAD
       <!--Highlights section-->
       <section id="cards is-justify-content-right ">
         <div class="columns">
@@ -251,35 +181,10 @@
                   </span>
                 </p>
               </footer>
-=======
-    </div>
-    <!--Highlights section-->
-    <section id="cards is-justify-content-right ">
-      <div class="columns">
-        <div class="column is-3 is-offset-9">
-          <div class="card m-1">
-            <div class="card-content">
-              <p class="title">Popular Games</p>
->>>>>>> 511db75a6c66d53394d85be644381b68d13bf488
             </div>
-            <footer class="card-footer">
-              <p class="card-footer-item">
-                <span>
-                  Check Out:
-                  <a href="https://www.destructoid.com/" target="blank">Destructoid</a>
-                </span>
-              </p>
-              <p class="card-footer-item">
-                <span>
-                  Check Out:
-                  <a href="https://www.gamesradar.com/" target="blank">gamesradar</a>
-                </span>
-              </p>
-            </footer>
           </div>
         </div>
-<<<<<<< HEAD
-
+        <!--cards with links-->
         <div class="columns">
           <div class="column is-3 is-offset-9">
             <div class="card is-justify-content-right">
@@ -304,48 +209,11 @@
                   </span>
                 </p>
               </footer>
-=======
-      </div>
-      <!--cards with links-->
-      <div class="columns">
-        <div class="column is-3 is-offset-9">
-          <div class="card is-justify-content-right">
-            <div class="card-content">
-              <p class="title">Highest Rated Games</p>
->>>>>>> 511db75a6c66d53394d85be644381b68d13bf488
             </div>
-            <footer class="card-footer">
-              <p class="card-footer-item">
-                <span>
-                  Check Out:
-                  <a href="https://www.gameinformer.com/" target="blank">gameinformer</a>
-                </span>
-              </p>
-              <p class="card-footer-item">
-                <span>
-                  Check Out:
-                  <a href="https://www.metacritic.com/game" target="blank">metacritic</a>
-                </span>
-              </p>
-            </footer>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
     </div>
-<<<<<<< HEAD
     <script src="./assets/js/script.js"></script>
-=======
-    <script type="text/javascript" src="./assets/js/script.js"></script>
->>>>>>> 511db75a6c66d53394d85be644381b68d13bf488
   </body>
 </html>
-=======
-      </div>
-    </section>
-  </div>
-  <script type="text/javascript" src="./assets/js/script.js"></script>
-</body>
-
-</html>
->>>>>>> ed963d2eb6e3a74f86e9b50a6b7a39cc32829b9a
