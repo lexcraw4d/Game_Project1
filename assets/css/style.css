@@ -37,14 +37,11 @@ i {
 /* Change the color of links on hover */
 .top-nav a:hover {
   background-color: #ddd;
-}
-.hero {
-  opacity: 0.9;
+  color: #333333;
 }
 #hero {
   background-color: #5a636a;
   opacity: 0.8;
-  color: #dbd8b9;
 }
 
 .row {
