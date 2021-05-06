@@ -57,7 +57,7 @@ function background(image, j) {
 
 	img.width = '300';
 	img.height = '150';
-	img.style = 'text-align:center';
+	img.style = 'margin-left:3em;';
 	//no image response -> default img
 	if (image.background_image === null) {
 		img.src =
@@ -78,7 +78,7 @@ function background(image, j) {
 function youTube(search, j) {
 	let platformSearch = $('#console option:selected').text();
 	$.ajax({
-		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyAajmBQDCqMUw-mID27rjfW-UXUYq8HTUs`,
+		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyAKper3Da_Jg9MYyx5aRwOwwz1bN-OgByU`,
 		type: 'GET',
 		dataType: 'jsonp',
 		cache: false,
