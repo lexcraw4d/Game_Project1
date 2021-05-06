@@ -39,7 +39,7 @@ Visual Studio Code (VS) was used to edit and improve the functionality of the gi
 
 In order to make effective changes to the website both [Git](https://gitforwindows.org/) and [GitHub](https://github.com/) were used in synchronization to push commits of the latest updated version. 
 
-![git](./assets/Github.png)
+![gitBash](assets/css/Github.png)
 
 
 Git is version control system which allows multiple users to make changes to one single repository.
