@@ -15,10 +15,10 @@ This source code is available to everyone under the standard [MIT License](https
 ![Results on user preferences](assets/css/results.jpg)
 
 # Meet to Team
-![Joshua Nguyen - JavaScript Local Storage](assets/css/joshAbout.jpg)
-![Rachel Solov - CSS](assets/css/rachelAbout.jpg)
-![Derrick Huggins - HTML, PPT](assets/css/derrickAbout.jpg)
-![Lexie Crawford - APIs, JavaScript, ReadME, Project Lead](assets/css/lexieAbout.jpg)
+![Joshua Nguyen JavaScript LocalStorage ](assets/css/joshAbout.JPG)
+![Rachel Solov- CSS](assets/css/rachelAbout.JPG)
+![Derrick Huggins - HTML PPT](assets/css/derrickAbout.JPG)
+![Lexie Crawford - APIs, JavaScript, ReadME, Project Lead](assets/css/lexieAbout.JPG)
 
 # Installation
 To install please visit [my repository](https://github.com/lexcraw4d/Gaminator) and look at the uploaded files via GitHub Deployment.
