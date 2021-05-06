@@ -55,9 +55,9 @@ function background(image, j) {
 	var img = document.createElement('img');
 	var imgdiv = document.createElement('div');
 
-	img.width = '220';
-	img.height = '175';
-	img.style = 'margin-left: 3em;';
+	img.width = '300';
+	img.height = '150';
+	img.style = 'text-align:center';
 	//no image response -> default img
 	if (image.background_image === null) {
 		img.src =
@@ -66,6 +66,7 @@ function background(image, j) {
 	imgdiv.append(img);
 	
 	divEl.append(imgdiv);
+	
 
 	var div = document.createElement('div');
 	div.id = 'div' + j;
