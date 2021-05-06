@@ -57,16 +57,15 @@ function background(image, j) {
 
 	img.width = '300';
 	img.height = '150';
-	img.style = 'margin-left:3em;';
+	img.style = 'margin-left:1.4em;';
 	//no image response -> default img
 	if (image.background_image === null) {
 		img.src =
 			'https://media.moddb.com/cache/images/games/1/43/42826/thumb_620x2000/COMING_SOON.jpg';
 	} else img.src = image.background_image;
 	imgdiv.append(img);
-	
+
 	divEl.append(imgdiv);
-	
 
 	var div = document.createElement('div');
 	div.id = 'div' + j;
@@ -74,7 +73,7 @@ function background(image, j) {
 	divEl.append(div);
 	divEl.innerHTML += '<hr>';
 }
-//fetches YouTube API and appends results 
+//fetches YouTube API and appends results
 function youTube(search, j) {
 	let platformSearch = $('#console option:selected').text();
 	$.ajax({
@@ -92,8 +91,6 @@ function youTube(search, j) {
 			}
 		},
 	});
-
-
 }
 
 button.addEventListener('click', function (e) {
