@@ -17,7 +17,7 @@
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/about-us.css" />
+
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -31,21 +31,43 @@
     <header>
       <!-- nav bar  -->
 
-      <div class="top-nav">
-        <i class="fas fa-gamepad fa-3x" style="color: #bec7b4"></i>
+      <section
+        class="hero is-small is-primary"
+        style="background-color: #3c434b; color: #dbd8b9"
+      >
+        <div class="hero-body">
+          <ul class="top-nav">
+            <li class="left">
+              <i class="fas fa-gamepad fa-3x" style="color: #bec7b4"
+                >Gaminator</i
+              >
+            </li>
 
-        <a href="./about-us.html" style="color: #bec7b4">About Us</a>
-      </div>
+            <li class="right">
+              <a href="./about-us.html" style="color: #bec7b4">About Us</a>
+            </li>
+
+            <li class="right"><a href="">Favorites</a></li>
+          </ul>
+        </div>
+      </section>
     </header>
     <!--Title and instructions-->
     <section id="hero" class="hero is-small is-primary">
       <div class="hero-body">
-        <p class="title">Gaminator</p>
-        <p class="subtitle">
-          1.<br />
-          2.<br />
-          3.<br />
+        <p>
+          Welcome to Gaminator! The gaming industry is booming, meaning there
+          are tons of great and innovative games consistently being released. As
+          the technology improves more and more people are both gaining access
+          and interest to all of the new and exciting video games coming out.
+          However with over 1 million games available it can be a daunting task
+          for a newcomer to find the right game for them. With the help of
+          Gaminator newcomers like yourself can find the right games with these
+          simple steps: <br />
         </p>
+        1. Choose your answer in the each of the four dropdown menus <br />
+        2. Hit the submit button <br />
+        3. View the games our algorithm suggests
       </div>
     </section>
     <!--dropdown begins-->
@@ -54,7 +76,7 @@
         <form class="example">
           <div class="column">
             <!-- Genre: -->
-            <label for="searchInput" class="test"></label>
+            <label for="searchInput"></label>
             <select style="background-color: #bec7b4" name="genres" id="genres">
               Pick a genre
               <option value="">Genre</option>
@@ -131,6 +153,7 @@
           <iframe id="ytubeid"></iframe>
         </div>
       </div>
+
       <!--Highlights section-->
       <section id="cards is-justify-content-right ">
         <div class="columns">
