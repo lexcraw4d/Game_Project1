@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+const favBtn = document.getElementById("favorite-button");
 const button = document.getElementById("submit");
 let test = document.querySelector("#test");
 let release = document.querySelector("#release");
