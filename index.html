@@ -16,29 +16,48 @@
   
     <title>Gaminator</title>
   </head>
+
   <body>
     <header>
       <!-- nav bar  -->
 
-      <div class="top-nav">
-        <i class="fas fa-gamepad fa-3x" style="color: #bec7b4"></i>
+      <section
+        class="hero is-small is-primary"
+        style="background-color: #3c434b; color: #dbd8b9"
+      >
+        <div class="hero-body">
+          <ul class="top-nav">
+            <li class="left">
+              <i class="fas fa-gamepad fa-3x" style="color: #bec7b4"
+                >Gaminator</i
+              >
+            </li>
 
-        <a href="./about-us.html" style="color: #bec7b4">About Us</a>
-      </div>
+            <li class="right">
+              <a href="./about-us.html" style="color: #bec7b4">About Us</a>
+            </li>
+
+            <li id="favorite-button" class="right"><a href="./favepage.html">Favorites</a></li>
+          </ul>
+        </div>
+      </section>
     </header>
     <!--Title and instructions-->
     <section id="hero" class="hero is-small is-primary">
       <div class="hero-body">
-        <p class="title">Game-inator</p>
-        <p class="subtitle">
-          Welcome to Game-inator! <br>
-          Our goal is to help decide what games you want to play. <br>
-          Follow the following steps!
-          Step 1: Select genre, platform, and rating  <br />
-          Step 2: Do you want newly released games? Single or Multiplayer <br />
-          Step 3: Get Game!<br />
-          Step 4: Pick your game! <br>
+        <p>
+          Welcome to Gaminator! The gaming industry is booming, meaning there
+          are tons of great and innovative games consistently being released. As
+          the technology improves more and more people are both gaining access
+          and interest to all of the new and exciting video games coming out.
+          However with over 1 million games available it can be a daunting task
+          for a newcomer to find the right game for them. With the help of
+          Gaminator newcomers like yourself can find the right games with these
+          simple steps: <br />
         </p>
+        1. Choose your answer in the each of the four dropdown menus <br />
+        2. Hit the submit button <br />
+        3. View the games our algorithm suggests
       </div>
     </section>
     <!--dropdown begins-->
@@ -47,17 +66,16 @@
         <form class="example">
           <div class="column">
             <!-- Genre: -->
-            <label for="searchInput" class="test"></label>
+            <label for="searchInput"></label>
             <select style="background-color: #bec7b4" name="genres" id="genres">
               Pick a genre
-              Pick a genre
-            <option value="">Genre</option>
-            <option value="action">Action</option>
-            <option value="adventure">Adventure</option>
-            <option value="strategy">Strategy</option>
-            <option value="rpg">RPG</option>
-            <option value="sports">Sports</option>
-            <option value="puzzle">Puzzle</option>
+              <option value="">Genre</option>
+              <option value="action">Action</option>
+              <option value="adventure">Adventure</option>
+              <option value="strategy">Strategy</option>
+              <option value="rpg">RPG</option>
+              <option value="sports">Sports</option>
+              <option value="puzzle">Puzzle</option>
             </select>
           </div>
           <div class="column">
@@ -67,20 +85,22 @@
               name="console"
               id="console"
             >
-              Pick your platform
-              <option value="">Console</option>
+              Pick your console
+              <option value="" selected="selected">Console</option>
               <option value="4,6">PC,Web,Linux</option>
               <option value="21,5">macOS, Android</option>
               <option value="2">Playstation</option>
               <option value="15">Playstation 2</option>
-              <option value="3">Playstation 3</option>
-              <option value="4">PlayStation 4</option>
+              <option value="16">Playstation 3</option>
+              <option value="18">PlayStation 4</option>
               <option value="187">PlayStation 5</option>
               <option value="7">Nintendo Switch/Nintendo</option>
               <option value="10,11">Wii/Wii U</option>
               <option value="3">Xbox</option>
               <option value="1">Xbox One</option>
+              <option value="14">Xbox 360</option>
               <option value="186">Xbox Series S/X</option>
+              <option value="83">Nintendo 64</option>
             </select>
           </div>
           <div class="column">
@@ -107,15 +127,23 @@
             </select>
           </div>
           <div class="column">
-            <input type="button" id="submit" name="submit" value="submit" class="column"
+            <input
+              type="button"
+              id="submit"
+              name="submit"
+              value="Submit"
+              class="column"
             />
           </div>
-          <div id="test">"Game Information displayed here:</div>
         </form>
       </div>
       <div class="move">
         <div class="column" id="test">Game information displayed here:</div>
+        <div id="videoEl">
+          <iframe id="ytubeid"></iframe>
+        </div>
       </div>
+
       <!--Highlights section-->
       <section id="cards is-justify-content-right ">
         <div class="columns">
@@ -124,24 +152,6 @@
               <div class="card-content">
                 <p class="title">Popular Games</p>
               </div>
-              <footer class="card-footer">
-                <p class="card-footer-item">
-                  <span>
-                    Check Out:
-                    <a href="https://www.destructoid.com/" target="blank"
-                      >Destructoid</a
-                    >
-                  </span>
-                </p>
-                <p class="card-footer-item">
-                  <span>
-                    Check Out:
-                    <a href="https://www.gamesradar.com/" target="blank"
-                      >gamesradar</a
-                    >
-                  </span>
-                </p>
-              </footer>
             </div>
           </div>
         </div>
@@ -152,24 +162,6 @@
               <div class="card-content">
                 <p class="title">Highest Rated Games</p>
               </div>
-              <footer class="card-footer">
-                <p class="card-footer-item">
-                  <span>
-                    Check Out:
-                    <a href="https://www.gameinformer.com/" target="blank"
-                      >gameinformer</a
-                    >
-                  </span>
-                </p>
-                <p class="card-footer-item">
-                  <span>
-                    Check Out:
-                    <a href="https://www.metacritic.com/game" target="blank"
-                      >metacritic</a
-                    >
-                  </span>
-                </p>
-              </footer>
             </div>
           </div>
         </div>
@@ -177,4 +169,4 @@
     </div>
     <script type="text/javascript" src="./assets/js/script.js"></script>
   </body>
-</html> -->
+</html> 
