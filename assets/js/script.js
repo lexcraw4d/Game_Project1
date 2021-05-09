@@ -25,8 +25,7 @@ function getData(usersInput) {
 				divEl.dataset.name = results.name;
 				consoleDevice(results);
 				background(results, i);
-				debugger;
-        divEl.append(favBtn);
+				divEl.append(favBtn);
 				youTube(results.name, i); //name
 			}
 		});
@@ -97,7 +96,7 @@ button.addEventListener('click', function (e) {
 	e.preventDefault();
 	getGames();
 });
-
+//*added for data localStorage purposes */
 favBtn.addEventListener('click', function getButton() {
 	alert(divEl.dataset.name);
 });
@@ -112,3 +111,4 @@ favBtn.addEventListener('click', function getButton() {
 //if user clicks button push to an array []
 
 //split array or loop and append to a created div
+//-lx
