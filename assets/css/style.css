@@ -110,43 +110,51 @@ span {
 .card-footer {
   background-color: #f1f1f3;
 }
-
-/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-@media screen and (max-width: 980px) {
-  .row {
-    display: inline;
-  }
-
-  .column {
-    display: flex;
-  }
-
-}
-
-/* MEDIA QUERY FOR TABLETS AND SMALLER */
 @media screen and (max-width: 768px) {
   .row {
     display: inline;
   }
 
   .column {
-    display: flex;
+    display: block;
+    background-color: rgba(0, 0, 0, .0);
+    background-position: center;
+    float: inline-start;
   }
 
-}
-
-/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-@media screen and (max-width: 575px) {
-  .row {
-    display: inline;
+  #submit {
+    background-color: #f1f1f3;
+    color: black;
+    padding-top: 20;
   }
-
-  .column {
-    display: flex;
-  }
-
+  
   .move {
-    padding-left: 20px;
+    padding-left: 1px;
     padding-top: 50px;
   }
 }
+  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+  @media screen and (max-width: 575px) {
+    .row {
+      display: inline;
+    }
+  
+    .column {
+      display: flex;
+      background-color: rgba(0, 0, 0, .0);
+      background-position: center;
+      float: left;
+    }
+
+    #submit {
+      background-color: #f1f1f3;
+      color: black;
+      padding-top: 20;
+    }
+    
+    .move {
+      padding-left: 1px;
+      padding-top: 50px;
+    }
+
+  }
