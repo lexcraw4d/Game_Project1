@@ -102,131 +102,21 @@ button.addEventListener("click", function (e) {
 });
 
 // click to save favorite
-faveBtn.addEventListener("click", saveFavorite());
 
-function showFave() {
-  let div = document.createElement("div")
-  div.id = "div"
-}
+let genreVal = document.getElementById("genres");
+let consoleVal = document.getElementById("console");
+let ratingVal = document.getElementById("rating");
+let releaseVal = document.getElementById("release");
 
-// local storage save favorite
-function saveFavorite() {
-  let saveUserData = JSON.parse(localStorage.getItem('')) || [];
-  let newSavedData = [{
-      //saved user info, favorites
-      'genre': document.getElementById("genre").value,
-      'console': document.getElementById("console").value,
-      'rating': document.getElementById("rating").value,
-      'releaseDate': document.getElementById("releaseDate").value,
-      'players': document.getElementById("players").value
-  }];
-  saveUserData.push(newSavedData);
-  localStorage.setItem("results", JSON.stringify(saveUserData));
+// array of selected values 
+let combinedValues = [genreVal, consoleVal, ratingVal,  releaseVal]
+let result = combinedValues.options[combinedValues.selectedIndex].value;
 
-  let newSavedData1 = JSON.parse(localStorage.getItem("result"))
-}
+let userFavorites = document.querySelector("favorite-list");
+const containerEL = document.querySelector("container-element");
 
+let savedGames = [];
 
-// localstorage function 
-$(document).ready(function(){
-  $('example').change(function() {
-    localStorage.setItem(this.id, this.value);
-  }).val(function() {
-     return localStorage.getItem(this.id)
-  });
-});
-
-
-
-// genre storage
-if (localStorage.getItem('genre') === null) {
-  localStorage.setItem('genre', "action");
-  document.write("action");
-} else {
-  if (localStorage.getItem('genre') === "action") {
-      document.write("Action");
-  } else if (localStorage.getItem('genre') === "strategy") {
-      document.write("Strategy");
-  } else if (localStorage.getItem('genre') === "sports") {
-      document.write("Sports");
-  } else if (localStorage.getItem('genre') === "rpg") {
-      document.write("RPG");
-  } else if (localStorage.getItem('genre') === "adventure") {
-      document.write("Adventure");
-  } else if (localStorage.getItem('genre') === "---") {
-       document.write("puzzle");
-  }
-  // add more if we have more selections
-  // else if (localStorage.getItem('genre') === "---") {
-  //     document.write("fillout");
-  // } else if (localStorage.getItem('genre') === "---") {
-  //     document.write("fillout");
-  // } else if (localStorage.getItem('genre') === "---") {
-  //     document.write("fillout");
-  // } else if (localStorage.getItem('genre') === "---") {
-  //     document.write("fillout");
-  // } 
-};
-
-//console storage
-
-if (localStorage.getItem('console') === null) {
-  localStorage.setItem('console', "4,6");
-  document.write("PC,Web,Linux");
-} else {
-  if (localStorage.getItem('console') === "4,6") {
-      document.write("PC,Web,Linux");
-  } else if (localStorage.getItem('console') === "4,6") {
-      document.write("PC,Web,Linux");
-  } else if (localStorage.getItem('console') === "21,5") {
-      document.write("macOS, Android");
-  } else if (localStorage.getItem('console') === "2") {
-      document.write("Playstation");
-  } else if (localStorage.getItem('console') === "15") {
-      document.write("Playstation 2");
-  } else if (localStorage.getItem('console') === "3") {
-      document.write("Playstation 3");
-  } else if (localStorage.getItem('console') === "4") {
-      document.write("Playstation 4");
-  } else if (localStorage.getItem('console') === "187") {
-      document.write("Playstation 5");
-  } else if (localStorage.getItem('console') === "7") {
-      document.write("Nintendo Switch/Nintendo");
-  } else if (localStorage.getItem('console') === "10,11") {
-      document.write("Wii/Wii U");
-  } else if (localStorage.getItem('console') === "3") {
-      document.write("Xbox");
-  } else if (localStorage.getItem('console') === "1") {
-      document.write("Xbox One");
-  } else if (localStorage.getItem('console') === "186") {
-      document.write("Xbox Series S/X");
-  } 
-};
-
-
-//rating storage
-
-if (localStorage.getItem('rating') === null) {
-  localStorage.setItem('rating', "everyone");
-  document.write("Everyone");
-} else {
-  if (localStorage.getItem('rating') === "everyone") {
-      document.write("Everyone");
-  } else if (localStorage.getItem('rating') === "teen") {
-      document.write("Teen");
-  } else if (localStorage.getItem('rating') === "mature") {
-      document.write("Mature");
-  }
-};
-
-//release date storage
-if (localStorage.getItem('release') === null) {
-  localStorage.setItem('release', "yes");
-  document.write("yes");
-} else {
-  if (localStorage.getItem('release') === "yes") {
-      document.write("Yes");
-  } else if (localStorage.getItem('release') === "no") {
-      document.write("No");
-  }
+let savedFavorites = function() {
+  localStorage.setItem("", JSON.stringify(combinedValues));
 };
