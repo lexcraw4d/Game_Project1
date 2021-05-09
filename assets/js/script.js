@@ -102,28 +102,24 @@ button.addEventListener("click", function (e) {
 });
 
 
+// added favorite button, linked to the html
+$('.favorite-button').on('click', event => {
+  let storedFavorite = $(event.target).parents()[1].firstElementChild.innerHTML;
 
+  let favorites = localStorage.getItem("favorites");
+  if (!favorites){
+    localStorage.setItem("favorites", JSON.stringify({stored:[]}));
+    favorites = JSON.parse(localStorage.getItem("favorites"));
+  }else{
+    favorites = JSON.parse(favorites);
+  }
+  
+  favorites.stored.push(storedFavorite);
 
+  localStorage.setItem("favorites", JSON.stringify(favorites));
 
-// let saveGames = function() {
-//   localStorage.setItem(arrayInput, JSON.stringify(favGames));
-// }
+});
 
-// let favGames = [];
+// to retrieve stored favorites
+let favorites = JSON.parse(localStorage.getItem("favorites"));
 
-
-// let favoriteGameSelected = function (event) {
-//   event.preventDefault();
-//   let genreInput = document.querySelector('genre');
-//   let consoleInput = document.querySelector('console');
-//   let ratingInput = document.querySelector('rating');
-//   let releaseInput = document.querySelector('release');
-//   let arrayInput = [genreInput, consoleInput, ratingInput, releaseInput];
-
-//   if (!genreInput || !consoleInput || !ratingInput || !releaseInput) {
-//     alert("You currently have no Favorites");
-//     return false
-//   }
-
-
-// }
