@@ -82,12 +82,12 @@ function youTube(search, j) {
 		cache: false,
 		success: function (response) {
 			var data = response;
-
-			if (data.items.length > 0) {
-				let videoId = data.items[0].id.videoId;
-				$('<iframe>', { src: 'https://www.youtube.com/embed/' + videoId }).appendTo($('#div' + j));
-				console.log(videoId + 'HERE IS VIDEO ID');
-			}
+			//this adds to give back ALL youTube data associated with it
+			// if (data.items.length > ) {
+			let videoId = data.items[0].id.videoId;
+			$('<iframe>', { src: 'https://www.youtube.com/embed/' + videoId }).appendTo($('#div' + j));
+			console.log(videoId + 'HERE IS VIDEO ID');
+			// }
 		},
 	});
 }
