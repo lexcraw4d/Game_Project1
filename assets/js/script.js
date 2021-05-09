@@ -13,7 +13,7 @@ function getData(usersInput) {
 	fetch(usersInput)
 		.then((res) => res.json())
 		.then((data) => {
-			for (let i = 0; i < 1; i++) {
+			for (let i = 0; i < 4; i++) {
 				let results = data.results[i];
 				console.log(results);
 				test.append(divEl);
