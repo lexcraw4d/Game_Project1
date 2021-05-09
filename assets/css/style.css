@@ -1,96 +1,152 @@
 /* styles for whole page */
 * {
-  font-family: Andale Mono, monospace;
+  font-family: Trebuchet MS;
+}
+html {
+  background-color: #0a2c5a;
 }
 /* background image style */
-.bg {
-  background-image: url("Screenshot 2021-05-03 111539.jpg");
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+main {
+  background-image: url("wp5231551-4k-gaming-wallpapers.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-color: #0a2c5a;
 }
 /* nav bar style */
 .top-nav {
-  background-color: #3c434b;
+  background-color: #0a2c5a;
   overflow: hidden;
-  color: #bec7b4;
+  color: #f1f1f3;
 }
 
 /* Style the links inside the navigation bar */
-.top-nav a {
-  float: right;
-  color: #bec7b4;
-  text-align: right;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 24px;
-}
-i {
+.topnav a {
   float: left;
-  color: #bec7b4;
-  text-align: right;
+  color: #f1f1f3;
+  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 24px;
 }
 
-/* Change the color of links on hover */
-.top-nav a:hover {
-  background-color: #ddd;
-  color: #333333;
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
 }
-
+/* hover for about us*/
+.topnav-right a:hover {
+  background-color: #efd5c6;
+  color: #0a2c5a;
+}
+/*instructions and title styles*/
 #hero {
-  background-color: #5a636a;
+  background-color: #155d8d;
   opacity: 0.8;
+  color: #f1f1f3;
+  opacity: 0.9;
+  font-size: medium;
 }
-
+/* instructions positioning*/
+.info {
+  text-align: center;
+}
+/*directions positioning*/
+.directions {
+  margin-top: 5px;
+  text-align: center;
+}
+/* cards styling*/
 .row {
   display: table;
-  color: #3c434b;
-  padding-left: 200px;
-  /* table-layout:initial; Optional */
-  border-spacing: 10px; /*Optional*/
+  color: #f1f1f3;
+  padding-left: 90px;
+
+  border-spacing: 10px;
 }
+/* cards alignment*/
 .column {
   border-radius: 12px;
   display: table-cell;
-  background-color: #97a9bd;
+  background-color: #155d8d;
   background-size: 1px;
   opacity: 0.8;
   border-style: hidden;
 }
+/*dropdown styles*/
 .value {
   border-radius: 12px;
-  color: #3c434b;
+  color: #f1f1f3;
 }
-
+/* submit button*/
+#submit {
+  color: #f1f1f3;
+  font-size: 18px;
+  font-family: Trebuchet MS;
+}
+/*game suggests positioning*/
 .move {
-  padding-left: 475px;
+  padding-left: 540px;
 }
-
+/* card positioning*/
+.card {
+  justify-content: space-between;
+}
+/* content color*/
 .card-content {
-  background-color: #bec7b4;
+  background-color: #f1f1f3;
 }
-
-.card-footer {
-  background-color: #bec7b4;
-}
-/* button style */
-
-/* .form-input {
-  background-color: #616161;
-  color: black;
-  border-radius: 12px;
-  font-size: 17px;
-  padding: 10px 25px;
+/* card title styles*/
+.title {
+  font-size: 19px;
   text-align: center;
-} */
+}
+/*card text alignment*/
+span {
+  text-align: center;
+}
+/* card footer color*/
+.card-footer {
+  background-color: #f1f1f3;
+}
 
-/* card style */
-/* #cards {
-  opacity: 0.75; */
-/* height: 100%;
-  display: flex;
-  flex-direction: column; */
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+  .row {
+    display: inline;
+  }
+
+  .column {
+    display: flex;
+  }
+
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+  .row {
+    display: inline;
+  }
+
+  .column {
+    display: flex;
+  }
+
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  .row {
+    display: inline;
+  }
+
+  .column {
+    display: flex;
+  }
+
+  .move {
+    padding-left: 20px;
+    padding-top: 50px;
+  }
+}
