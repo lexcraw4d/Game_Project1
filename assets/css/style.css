@@ -101,6 +101,7 @@ main {
 .title {
   font-size: 19px;
   text-align: center;
+<<<<<<< HEAD
 }
 /*card text alignment*/
 span {
@@ -113,3 +114,14 @@ span {
 
 
 /* favorite button styles */
+=======
+}
+/*card text alignment*/
+span {
+  text-align: center;
+}
+/* card footer color*/
+.card-footer {
+  background-color: #f1f1f3;
+}
+>>>>>>> afbfc3261bc0313d093bb8a2f10dd2cfa55da7eb
