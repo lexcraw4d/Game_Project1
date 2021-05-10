@@ -1,31 +1,32 @@
 const button = document.getElementById('submit');
 let test = document.querySelector('#test');
 let release = document.querySelector('#release');
-let divEl = document.createElement('div');
-// let favBtn = document.createElement('i');
-// let realButton = document.createElement('button');
 let favBtn = document.createElement('BUTTON');
+let divEl = document.createElement('div');
+let gameTitle = document.createElement('div');
+
 $(favBtn).attr('class', 'fa fa-star fa-1x');
 $(favBtn).attr('aria-hidden', 'true');
-
+// let gameArr = [];
 function getData(usersInput) {
 	console.log(usersInput);
 	fetch(usersInput)
 		.then((res) => res.json())
 		.then((data) => {
-			for (let i = 0; i < 4; i++) {
+			for (let i = 0; i < 5; i++) {
 				let results = data.results[i];
-				console.log(results);
 				test.append(divEl);
-				divEl.append(results.name);
+				gameTitle.append(results.name);
+				divEl.append(gameTitle);
+				divEl.append(favBtn);
 				divEl.innerHTML += '<br>';
 				divEl.innerHTML += 'Rating:';
 				divEl.append(results.rating);
 				divEl.innerHTML += '<br>';
+				gameTitle.setAttribute('id', results.name);
 				divEl.dataset.name = results.name;
 				consoleDevice(results);
 				background(results, i);
-				divEl.append(favBtn);
 				youTube(results.name, i); //name
 			}
 		});
@@ -76,7 +77,7 @@ function background(image, j) {
 function youTube(search, j) {
 	let platformSearch = $('#console option:selected').text();
 	$.ajax({
-		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyDhBNSQeAeCHnA5px4fulybDjeKJooQKR4`,
+		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyAyX6mNT5_rCoSyPnqIPljCmoAv0b2Pyf8`,
 		type: 'GET',
 		dataType: 'jsonp',
 		cache: false,
