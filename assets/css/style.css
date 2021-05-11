@@ -1,4 +1,3 @@
-/* styles for whole page */
 * {
   font-family: Trebuchet MS;
 }
@@ -128,6 +127,10 @@ span {
   background-color: #f1f1f3;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> joshuaN
 @media screen and (max-width: 768px) {
   .row {
     display: inline;
@@ -145,12 +148,17 @@ span {
     color: black;
     padding-top: 20;
   }
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> joshuaN
   .move {
     padding-left: 1px;
     padding-top: 50px;
   }
 }
+<<<<<<< HEAD
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 @media screen and (max-width: 575px) {
@@ -177,3 +185,30 @@ span {
   }
 
 }
+=======
+  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+  @media screen and (max-width: 575px) {
+    .row {
+      display: inline;
+    }
+  
+    .column {
+      display: flex;
+      background-color: rgba(0, 0, 0, .0);
+      background-position: center;
+      float: left;
+    }
+
+    #submit {
+      background-color: #f1f1f3;
+      color: black;
+      padding-top: 20;
+    }
+    
+    .move {
+      padding-left: 1px;
+      padding-top: 50px;
+    }
+
+  }
+>>>>>>> joshuaN
