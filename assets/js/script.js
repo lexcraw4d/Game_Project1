@@ -1,41 +1,38 @@
 const button = document.getElementById('submit');
 let test = document.querySelector('#test');
 let release = document.querySelector('#release');
-let favBtn = document.createElement('BUTTON');
-let divEl = document.createElement('div');
-let gameTitle = document.createElement('div');
 
-$(favBtn).attr('class', 'fa fa-star fa-1x');
-$(favBtn).attr('aria-hidden', 'true');
-// let gameArr = [];
 function getData(usersInput) {
 	console.log(usersInput);
 	fetch(usersInput)
 		.then((res) => res.json())
 		.then((data) => {
+			console.log(data);
 			for (let i = 0; i < 5; i++) {
+				let divEl = document.createElement('div');
+				let gameTitle = document.createElement('div');
 				let results = data.results[i];
+				divEl.id = results.name;
 				test.append(divEl);
 				gameTitle.append(results.name);
 				divEl.append(gameTitle);
-				divEl.append(favBtn);
+				addFavBtn(divEl);
 				divEl.innerHTML += '<br>';
 				divEl.innerHTML += 'Rating:';
 				divEl.append(results.rating);
 				divEl.innerHTML += '<br>';
 				gameTitle.setAttribute('id', results.name);
 				divEl.dataset.name = results.name;
-				consoleDevice(results);
-				background(results, i);
+				consoleDevice(divEl, results);
+				background(divEl, results, i);
 				youTube(results.name, i); //name
 			}
 		});
 }
-
-function consoleDevice(currentGame) {
+function consoleDevice(parentEl, currentGame) {
 	for (let p = 0; p < currentGame.platforms.length; p++) {
-		divEl.append(currentGame.platforms[p].platform.name);
-		divEl.innerHTML += '<br>';
+		parentEl.append(currentGame.platforms[p].platform.name);
+		parentEl.innerHTML += '<br>';
 	}
 }
 function getGames() {
@@ -52,7 +49,7 @@ function getGames() {
 			: releaseDatesImp.yesUrl;
 	getData(userSelection);
 }
-function background(image, j) {
+function background(parentEl, image, j) {
 	var img = document.createElement('img');
 	var imgdiv = document.createElement('div');
 
@@ -66,19 +63,19 @@ function background(image, j) {
 	} else img.src = image.background_image;
 	imgdiv.append(img);
 
-	divEl.append(imgdiv);
+	parentEl.append(imgdiv);
 
 	var div = document.createElement('div');
 	div.id = 'div' + j;
 	div.style = 'text-align: center;';
-	divEl.append(div);
-	divEl.innerHTML += '<hr>';
+	parentEl.append(div);
+	parentEl.innerHTML += '<hr>';
 }
 
 function youTube(search, j) {
 	let platformSearch = $('#console option:selected').text();
 	$.ajax({
-		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyAyX6mNT5_rCoSyPnqIPljCmoAv0b2Pyf8`,
+		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyDBWLEbuOJ78Ps5jjz0N1EcqD_Jw4hP-2s`,
 		type: 'GET',
 		dataType: 'jsonp',
 		cache: false,
@@ -98,19 +95,31 @@ button.addEventListener('click', function (e) {
 	e.preventDefault();
 	getGames();
 });
+
 //*added for data localStorage purposes */
-favBtn.addEventListener('click', function getButton() {
-	alert(divEl.dataset.name);
-});
+function addFavBtn(parentEl) {
+	// let addFav = "Add to Favorites"
+	// let removeFav = "Remove"
+	const newBtn = document.createElement('button');
+	$(newBtn).attr('class', 'fa fa-star fa-1x');
+	$(newBtn).attr('aria-hidden', 'true');
+	parentEl.append(newBtn);
+	$(parentEl).on('click', newBtn, function () {
+		const gameName = $(parentEl).attr('id');
+		let favGames = JSON.parse(localStorage.getItem('Favorite Games')) || [];
+		console.log(favGames);
+		const found = favGames.find((name) => {
+			return name === gameName;
+		});
 
-//Pseudocode for Local Storage
-//when user clicks btn it
-//save as 'game' 'actualgamename' ?? --> event.target on click//
-//renders to localStorage
+		if (found) {
+			favGames = favGames.filter((name) => {
+				return name !== gameName;
+			});
+		} else {
+			favGames.push(gameName);
+		}
 
-//json.stringify setItem()
-//parse json to getItem
-//if user clicks button push to an array []
-
-//split array or loop and append to a created div
-//-lx
+		localStorage.setItem('Favorite Games', JSON.stringify(favGames));
+	});
+}
