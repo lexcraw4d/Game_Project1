@@ -58,6 +58,7 @@ function background(image, j) {
 
 	img.width = '300';
 	img.height = '175';
+	img.style = 'text-align:center';
 
 	if (image.background_image === null) {
 		img.src =
