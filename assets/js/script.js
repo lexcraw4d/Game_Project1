@@ -1,38 +1,41 @@
 const button = document.getElementById('submit');
 let test = document.querySelector('#test');
 let release = document.querySelector('#release');
+let favBtn = document.createElement('BUTTON');
+let divEl = document.createElement('div');
+let gameTitle = document.createElement('div');
 
+$(favBtn).attr('class', 'fa fa-star fa-1x');
+$(favBtn).attr('aria-hidden', 'true');
+// let gameArr = [];
 function getData(usersInput) {
 	console.log(usersInput);
 	fetch(usersInput)
 		.then((res) => res.json())
 		.then((data) => {
-			console.log(data);
 			for (let i = 0; i < 5; i++) {
-				let divEl = document.createElement('div');
-				let gameTitle = document.createElement('div');
 				let results = data.results[i];
-				divEl.id = results.name;
 				test.append(divEl);
 				gameTitle.append(results.name);
 				divEl.append(gameTitle);
-				addFavBtn(divEl);
+				divEl.append(favBtn);
 				divEl.innerHTML += '<br>';
 				divEl.innerHTML += 'Rating:';
 				divEl.append(results.rating);
 				divEl.innerHTML += '<br>';
 				gameTitle.setAttribute('id', results.name);
 				divEl.dataset.name = results.name;
-				consoleDevice(divEl, results);
-				background(divEl, results, i);
+				consoleDevice(results);
+				background(results, i);
 				youTube(results.name, i); //name
 			}
 		});
 }
-function consoleDevice(parentEl, currentGame) {
+
+function consoleDevice(currentGame) {
 	for (let p = 0; p < currentGame.platforms.length; p++) {
-		parentEl.append(currentGame.platforms[p].platform.name);
-		parentEl.innerHTML += '<br>';
+		divEl.append(currentGame.platforms[p].platform.name);
+		divEl.innerHTML += '<br>';
 	}
 }
 function getGames() {
@@ -49,7 +52,7 @@ function getGames() {
 			: releaseDatesImp.yesUrl;
 	getData(userSelection);
 }
-function background(parentEl, image, j) {
+function background(image, j) {
 	var img = document.createElement('img');
 	var imgdiv = document.createElement('div');
 
@@ -63,19 +66,19 @@ function background(parentEl, image, j) {
 	} else img.src = image.background_image;
 	imgdiv.append(img);
 
-	parentEl.append(imgdiv);
+	divEl.append(imgdiv);
 
 	var div = document.createElement('div');
 	div.id = 'div' + j;
 	div.style = 'text-align: center;';
-	parentEl.append(div);
-	parentEl.innerHTML += '<hr>';
+	divEl.append(div);
+	divEl.innerHTML += '<hr>';
 }
 
 function youTube(search, j) {
 	let platformSearch = $('#console option:selected').text();
 	$.ajax({
-		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyDBWLEbuOJ78Ps5jjz0N1EcqD_Jw4hP-2s`,
+		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyAyX6mNT5_rCoSyPnqIPljCmoAv0b2Pyf8`,
 		type: 'GET',
 		dataType: 'jsonp',
 		cache: false,
@@ -95,31 +98,19 @@ button.addEventListener('click', function (e) {
 	e.preventDefault();
 	getGames();
 });
-
 //*added for data localStorage purposes */
-function addFavBtn(parentEl) {
-	// let addFav = "Add to Favorites"
-	// let removeFav = "Remove"
-	const newBtn = document.createElement('button');
-	$(newBtn).attr('class', 'fa fa-star fa-1x');
-	$(newBtn).attr('aria-hidden', 'true');
-	parentEl.append(newBtn);
-	$(parentEl).on('click', newBtn, function () {
-		const gameName = $(parentEl).attr('id');
-		let favGames = JSON.parse(localStorage.getItem('Favorite Games')) || [];
-		console.log(favGames);
-		const found = favGames.find((name) => {
-			return name === gameName;
-		});
+favBtn.addEventListener('click', function getButton() {
+	alert(divEl.dataset.name);
+});
 
-		if (found) {
-			favGames = favGames.filter((name) => {
-				return name !== gameName;
-			});
-		} else {
-			favGames.push(gameName);
-		}
+//Pseudocode for Local Storage
+//when user clicks btn it
+//save as 'game' 'actualgamename' ?? --> event.target on click//
+//renders to localStorage
 
-		localStorage.setItem('Favorite Games', JSON.stringify(favGames));
-	});
-}
+//json.stringify setItem()
+//parse json to getItem
+//if user clicks button push to an array []
+
+//split array or loop and append to a created div
+//-lx
