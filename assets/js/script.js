@@ -5,6 +5,8 @@ let favBtn = document.createElement('BUTTON');
 let divEl = document.createElement('div');
 let gameTitle = document.createElement('div');
 
+divEl.style = 'align-text:center';
+
 $(favBtn).attr('class', 'fa fa-star fa-1x');
 $(favBtn).attr('aria-hidden', 'true');
 // let gameArr = [];
