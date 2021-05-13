@@ -1,0 +1,93 @@
+* {
+    font-family: Trebuchet MS;
+  }
+  html {
+    background-color: #0a2c5a;
+  }
+  
+  /* nav bar style */
+  .top-nav {
+    background-color: #0a2c5a;
+    overflow: hidden;
+    color: #f1f1f3;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f1f1f3;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  
+  /* Right-aligned section inside the top navigation */
+  .topnav-right {
+    float: right;
+  }
+  /* hover for about us*/
+  .topnav-right a:hover {
+    background-color: #efd5c6;
+    color: #0a2c5a;
+  }
+ 
+
+
+  
+  
+  /* media query */
+  @media screen and (max-width: 768px) {
+    .row {
+      display: inline;
+    }
+  
+    .column {
+      display: block;
+      background-color: rgba(0, 0, 0, .0);
+      background-position: center;
+      float: inline-start;
+    }
+  
+    #submit {
+      background-color: #f1f1f3;
+      color: black;
+      padding-top: 20;
+    }
+    
+    .move {
+      padding-left: 1px;
+      padding-top: 50px;
+    }
+  }
+
+  #fav {
+      font-size: 50px;
+      color: white;
+      text-align: center;
+  }
+    /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+    @media screen and (max-width: 575px) {
+      .row {
+        display: inline;
+      }
+    
+      .column {
+        display: flex;
+        background-color: rgba(0, 0, 0, .0);
+        background-position: center;
+        float: left;
+      }
+  
+      #submit {
+        background-color: #f1f1f3;
+        color: black;
+        padding-top: 20;
+      }
+      
+      .move {
+        padding-left: 1px;
+        padding-top: 50px;
+      }
+  
+    }
