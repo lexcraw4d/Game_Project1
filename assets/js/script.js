@@ -1,26 +1,27 @@
 const button = document.getElementById('submit');
 let test = document.querySelector('#test');
 let release = document.querySelector('#release');
-let favBtn = document.createElement('BUTTON');
 let divEl = document.createElement('div');
 let gameTitle = document.createElement('div');
 
 divEl.style = 'align-text:center';
-
-$(favBtn).attr('class', 'fa fa-star fa-1x');
-$(favBtn).attr('aria-hidden', 'true');
 // let gameArr = [];
 function getData(usersInput) {
 	console.log(usersInput);
+
 	fetch(usersInput)
 		.then((res) => res.json())
 		.then((data) => {
 			for (let i = 0; i < 5; i++) {
+				let btnEl = document.createElement('button');
+				btnEl.type = 'button';
+				btnEl.setAttribute('class', 'fa fa-star fa-1x');
 				let results = data.results[i];
+				console.log(results);
 				test.append(divEl);
-				gameTitle.append(results.name);
-				divEl.append(gameTitle);
-				divEl.append(favBtn);
+				divEl.append(results.name);
+				divEl.append(btnEl);
+
 				divEl.innerHTML += '<br>';
 				divEl.innerHTML += 'Rating:';
 				divEl.append(results.rating);
@@ -61,6 +62,7 @@ function background(image, j) {
 	img.width = '300';
 	img.height = '175';
 	img.style = 'text-align:center';
+	imgdiv.style = 'text-align:center';
 
 	if (image.background_image === null) {
 		img.src =
@@ -79,6 +81,7 @@ function background(image, j) {
 
 function youTube(search, j) {
 	let platformSearch = $('#console option:selected').text();
+
 	$.ajax({
 		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyAyX6mNT5_rCoSyPnqIPljCmoAv0b2Pyf8`,
 		type: 'GET',
@@ -98,10 +101,11 @@ function youTube(search, j) {
 
 button.addEventListener('click', function (e) {
 	e.preventDefault();
+
 	getGames();
 });
 //*added for data localStorage purposes */
-favBtn.addEventListener('click', function getButton() {
+favBtn.addEventListener('click', () => {
 	alert(divEl.dataset.name);
 });
 
