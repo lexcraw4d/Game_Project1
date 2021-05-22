@@ -21,7 +21,6 @@ function getData(usersInput) {
 				test.append(divEl);
 				divEl.append(results.name);
 				divEl.append(btnEl);
-
 				divEl.innerHTML += '<br>';
 				divEl.innerHTML += 'Rating:';
 				divEl.append(results.rating);
@@ -31,6 +30,9 @@ function getData(usersInput) {
 				consoleDevice(results);
 				background(results, i);
 				youTube(results.name, i); //name
+				btnEl.addEventListener('click', () => {
+					alert(divEl.dataset.name);
+				});
 			}
 		});
 }
@@ -83,7 +85,7 @@ function youTube(search, j) {
 	let platformSearch = $('#console option:selected').text();
 
 	$.ajax({
-		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyAyX6mNT5_rCoSyPnqIPljCmoAv0b2Pyf8`,
+		url: `https://youtube.googleapis.com/youtube/v3/search?part=snippet&order=rating&q=${search}%20tutorial%20${platformSearch}&key=AIzaSyAajmBQDCqMUw-mID27rjfW-UXUYq8HTUs`,
 		type: 'GET',
 		dataType: 'jsonp',
 		cache: false,
@@ -105,9 +107,6 @@ button.addEventListener('click', function (e) {
 	getGames();
 });
 //*added for data localStorage purposes */
-favBtn.addEventListener('click', () => {
-	alert(divEl.dataset.name);
-});
 
 //Pseudocode for Local Storage
 //when user clicks btn it
