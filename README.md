@@ -19,9 +19,8 @@ This source code is available to everyone under the standard [MIT License](https
 
 # Meet to Team
 
-![Joshua Nguyen JavaScript LocalStorage ](assets/images/josh.jpg)
 ![Rachel Solov- CSS](assets/images/rachel.jpg)
-![Derrick Huggins - HTML PPT](assets/images/derrick.jpg)
+
 ![Lexie Crawford - APIs, JavaScript, ReadME, Project Lead](assets/images/lexie.jpg)
 
 # Installation
